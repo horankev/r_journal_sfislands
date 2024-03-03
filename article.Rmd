@@ -1456,6 +1456,11 @@ st_bridges(liverpool, "oa_cd") |>
 
 ```{r}
 
+# these models take a while to run
+# so i am using a saved version of their output
+# the files are large so are not on github
+# uncomment the model and run it to reproduce
+
 prepliv <- st_bridges(liverpool, "oa_cd")
 
 # liverpool_model2 <- gam(unemployment ~ lt_illness + 
@@ -1474,6 +1479,12 @@ liverpool_hmodel <- readRDS(here("data","liverpool_model2.rds"))
 ```
 
 ```{r}
+
+# these models take a while to run
+# so i am using a saved version of their output
+# the files are large so are not on github
+# uncomment the model and run it to reproduce
+
 # liverpool_hsamodel <- gam(unemployment ~ lt_illness +
 #                          s(msoa_cd, bs="re") +
 #                          s(msoa_cd, lt_illness, bs="re") +
@@ -1635,6 +1646,11 @@ prepliv <- liverpool |>
   mutate(nb = st_centroid(liverpool) |> 
               st_dist_band(upper = 0.7))
 names(prepliv$nb) <- prepliv$oa_cd
+
+# these models take a while to run
+# so i am using a saved version of their output
+# the files are large so are not on github
+# uncomment the model and run it to reproduce
 
 # liverpool_hsamodel_dist_band <- gam(unemployment ~ lt_illness +
 #                          s(msoa_cd, bs="re") +
