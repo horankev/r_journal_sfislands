@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.2)  15 MAR 2024 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.2)  15 MAR 2024 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -938,46 +938,46 @@ Package pdftex.def Info: article_files/figure-latex/lon-contig4-1.pdf  used on i
 <article_files/figure-latex/liv-nested-1.pdf, id=519, 712.6625pt x 332.24126pt>
 File: article_files/figure-latex/liv-nested-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-nested-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-nested-1.pdf  used on input line 1188.
+Package pdftex.def Info: article_files/figure-latex/liv-nested-1.pdf  used on input line 1183.
 (pdftex.def)             Requested size: 398.33858pt x 185.70403pt.
 <article_files/figure-latex/liv-vars-1.pdf, id=520, 383.4325pt x 272.01625pt>
 File: article_files/figure-latex/liv-vars-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-vars-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-vars-1.pdf  used on input line 1197.
+Package pdftex.def Info: article_files/figure-latex/liv-vars-1.pdf  used on input line 1192.
 (pdftex.def)             Requested size: 278.83578pt x 197.82309pt.
 [20 <./article_files/figure-latex/liv-nested-1.pdf>]
 <article_files/figure-latex/liv-contigs-1.pdf, id=544, 266.9975pt x 361.35pt>
 File: article_files/figure-latex/liv-contigs-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-contigs-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-contigs-1.pdf  used on input line 1225.
+Package pdftex.def Info: article_files/figure-latex/liv-contigs-1.pdf  used on input line 1220.
 (pdftex.def)             Requested size: 239.00557pt x 323.48068pt.
 <article_files/figure-latex/liv-est1-1.pdf, id=549, 841.1425pt x 206.7725pt>
 File: article_files/figure-latex/liv-est1-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-est1-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-est1-1.pdf  used on input line 1240.
+Package pdftex.def Info: article_files/figure-latex/liv-est1-1.pdf  used on input line 1235.
 (pdftex.def)             Requested size: 398.33858pt x 97.92137pt.
 <article_files/figure-latex/liv-est2-1.pdf, id=550, 843.15pt x 423.5825pt>
 File: article_files/figure-latex/liv-est2-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-est2-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-est2-1.pdf  used on input line 1251.
+Package pdftex.def Info: article_files/figure-latex/liv-est2-1.pdf  used on input line 1246.
 (pdftex.def)             Requested size: 398.33858pt x 200.11794pt.
 <article_files/figure-latex/liv-est3-1.pdf, id=551, 841.1425pt x 423.5825pt>
 File: article_files/figure-latex/liv-est3-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-est3-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-est3-1.pdf  used on input line 1262.
+Package pdftex.def Info: article_files/figure-latex/liv-est3-1.pdf  used on input line 1257.
 (pdftex.def)             Requested size: 398.33858pt x 200.59622pt.
 [21 <./article_files/figure-latex/liv-vars-1.pdf>] [22 <./article_files/figure-latex/liv-contigs-1.pdf> <./article_files/figure-latex/liv-est1-1.pdf>] [23 <./article_files/figure-latex/liv-est2-1.pdf> <./article_files/figure-latex/liv-est3-1.pdf>]
-Overfull \hbox (6.81241pt too wide) in paragraph at lines 1354--1356
+Overfull \hbox (6.81241pt too wide) in paragraph at lines 1349--1351
 \T1/zi4/m/n/9 en . wikipedia . org / w / index . php ? title = List % 20of % 20crossings % 20of % 20the % 20River % 20Thames &
  []
 
 No file RJwrapper.bbl.
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 1372.
+(Font)              using `T1/zi4/m/n' instead on input line 1367.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
-(Font)              scaled to size 9.18004pt on input line 1372.
+(Font)              scaled to size 9.18004pt on input line 1367.
 [24]) [25] (./RJwrapper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1007,7 +1007,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (25 pages, 8984113 bytes).
+Output written on RJwrapper.pdf (25 pages, 8984119 bytes).
 PDF statistics:
  774 PDF objects out of 1000 (max. 8388607)
  617 compressed objects within 7 object streams

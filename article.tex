@@ -1106,9 +1106,7 @@ st_bridges(london[riverside,], "NAME") |>
 \hypertarget{example-3-liverpool}{%
 \section{Example 3: Liverpool}\label{example-3-liverpool}}
 
-In this final example, there are no islands and no river issues. We saw in the Indonesia example how \texttt{sfislands} can extract estimates from the \texttt{mgcv} argument \texttt{bs="mrf"}. It can also deal with random effects as defined by \texttt{bs="re"} in \texttt{mgcv} models. This means it is possible to create quite complex models featuring both a traditional multi-level structure and conditionally related components. Here, we
-will construct a hierarchical model in this way which also features an ICAR component at the lowest level of the tree. We will
-compare two different types of contiguity which could be applied to the ICAR component:
+In this final example, there are no islands and no river issues. We saw in the Indonesia example how \texttt{sfislands} can extract estimates from the \texttt{mgcv} argument \texttt{bs="mrf"}. It can also deal with random effects as defined by \texttt{bs="re"} in \texttt{mgcv} models. This means it is possible to create quite complex models featuring both a traditional multi-level structure and conditionally related components. Here, we will construct a hierarchical model in this way which also features an ICAR component at the lowest level of the tree. We will compare two different types of contiguity which could be applied to the ICAR component:
 
 \begin{itemize}
 \tightlist
@@ -1122,8 +1120,7 @@ We will show how their outcomes can be quickly mapped to give an immediate sense
 
 This example is based on data from the \href{https://www.nomisweb.co.uk/home/census2001.asp}{Office of National Statistics} as presented by Rowe and Arribas-Bel (2024) in their demonstration of techniques for hierarchical spatial regression. They use the different levels of nested administrative boundaries in Liverpool for their demonstration. These are described in Table \ref{tab:livadmin-latex}, and are mapped separately in Figure \ref{fig:liv-nested}.
 
-Now suppose we wish to model unemployment as a function of limiting long-term
-illness, taking into account this hierarchical structure. Limiting long-term illness (LLTI) refers to a health problem or disability which limits a person's day-to-day activities (Barnett 2001). We wish to incorporate a fixed intercept and coefficient for LLTI, with additional random intercepts and slopes at MSOA and LSOA levels. The raw distribution of these variables across the output areas (OAs) of Liverpool are shown in Figure
+Now suppose we wish to model unemployment as a function of limiting long-term illness, taking into account this hierarchical structure. Limiting long-term illness (LLTI) refers to a health problem or disability which limits a person's day-to-day activities (Barnett 2001). We wish to incorporate a fixed intercept and coefficient for LLTI, with additional random intercepts and slopes at MSOA and LSOA levels. The raw distribution of these variables across the output areas (OAs) of Liverpool are shown in Figure
 \ref{fig:liv-vars}.
 
 If \(y_{ijk}\) and \(x_{ijk}\) are respectively the levels of unemployment and LLTI in each of \(i\) OAs within \(j\) lower level super output areas (LSOAs), which in turn are within \(k\) middle level super output areas (MSOAs), then
@@ -1161,9 +1158,7 @@ u_{jk} \sim N(0,\sigma_{u}^2)
 \end{equation}
 where the \(\gamma_{ijk}\)s comprise a vector of ICAR components for each OA, similar in form to the ICAR component for the provinces in the earlier Indonesia model. The vector has a multivariate normal distribution with mean 0 and precision related to the contiguity structure as before.
 
-There are no islands or discontiguities in this geometry of Liverpool so
-using \texttt{st\_bridges()} will give the same structure as would
-\texttt{sfdep::st\_contiguity()} (see Figure \ref{fig:liv-contigs}).
+There are no islands or discontiguities in this geometry of Liverpool so using \texttt{st\_bridges()} will give the same structure as would \texttt{sfdep::st\_contiguity()} (see Figure \ref{fig:liv-contigs}).
 
 \begin{table}
 

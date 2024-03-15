@@ -1300,9 +1300,7 @@ st_bridges(london[riverside,], "NAME") |>
 
 # Example 3: Liverpool
 
-In this final example, there are no islands and no river issues. We saw in the Indonesia example how `sfislands` can extract estimates from the `mgcv` argument `bs="mrf"`. It can also deal with random effects as defined by `bs="re"` in `mgcv` models. This means it is possible to create quite complex models featuring both a traditional multi-level structure and conditionally related components. Here, we
-will construct a hierarchical model in this way which also features an ICAR component at the lowest level of the tree. We will
-compare two different types of contiguity which could be applied to the ICAR component:
+In this final example, there are no islands and no river issues. We saw in the Indonesia example how `sfislands` can extract estimates from the `mgcv` argument `bs="mrf"`. It can also deal with random effects as defined by `bs="re"` in `mgcv` models. This means it is possible to create quite complex models featuring both a traditional multi-level structure and conditionally related components. Here, we will construct a hierarchical model in this way which also features an ICAR component at the lowest level of the tree. We will compare two different types of contiguity which could be applied to the ICAR component:
 
 * `st_bridges()` from `sfislands`, which implements first-order queen contiguity in the same way as `sfdep:st_contiguity()` for situations such as this where there are no islands, and 
 * `st_dist_band()` from \CRANpkg{sfdep}, which connects units whose centroids lie within a chosen distance threshold.
@@ -1311,8 +1309,7 @@ We will show how their outcomes can be quickly mapped to give an immediate sense
 
 This example is based on data from the [Office of National Statistics](https://www.nomisweb.co.uk/home/census2001.asp) as presented by @liverpool-notes in their demonstration of techniques for hierarchical spatial regression. They use the different levels of nested administrative boundaries in Liverpool for their demonstration. These are described in Table `r knitr::asis_output(ifelse(knitr::is_html_output(), '\\@ref(tab:livadmin-html)', '\\@ref(tab:livadmin-latex)'))`, and are mapped separately in Figure \@ref(fig:liv-nested).
 
-Now suppose we wish to model unemployment as a function of limiting long-term
-illness, taking into account this hierarchical structure. Limiting long-term illness (LLTI) refers to a health problem or disability which limits a person's day-to-day activities [@Barnett2001]. We wish to incorporate a fixed intercept and coefficient for LLTI, with additional random intercepts and slopes at MSOA and LSOA levels. The raw distribution of these variables across the output areas (OAs) of Liverpool are shown in Figure
+Now suppose we wish to model unemployment as a function of limiting long-term illness, taking into account this hierarchical structure. Limiting long-term illness (LLTI) refers to a health problem or disability which limits a person's day-to-day activities [@Barnett2001]. We wish to incorporate a fixed intercept and coefficient for LLTI, with additional random intercepts and slopes at MSOA and LSOA levels. The raw distribution of these variables across the output areas (OAs) of Liverpool are shown in Figure
 \@ref(fig:liv-vars).
 
 If $y_{ijk}$ and $x_{ijk}$ are respectively the levels of unemployment and LLTI in each of $i$ OAs within $j$ lower level super output areas (LSOAs), which in turn are within $k$ middle level super output areas (MSOAs), then 
@@ -1350,9 +1347,7 @@ u_{jk} \sim N(0,\sigma_{u}^2)
 \end{equation}
 where the $\gamma_{ijk}$s comprise a vector of ICAR components for each OA, similar in form to the ICAR component for the provinces in the earlier Indonesia model. The vector has a multivariate normal distribution with mean 0 and precision related to the contiguity structure as before.
 
-There are no islands or discontiguities in this geometry of Liverpool so
-using `st_bridges()` will give the same structure as would
-`sfdep::st_contiguity()` (see Figure \@ref(fig:liv-contigs)).
+There are no islands or discontiguities in this geometry of Liverpool so using `st_bridges()` will give the same structure as would `sfdep::st_contiguity()` (see Figure \@ref(fig:liv-contigs)).
 
 ```{r}
 livadmin <- tribble(
