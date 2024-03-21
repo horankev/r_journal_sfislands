@@ -7,7 +7,7 @@
 \maketitle
 
 \abstract{%
-Fitting areal spatial models can be a cumbersome task, particularly when the geographical units are not well-behaved. The presence of islands gives rise to particular issues when creating neighbourhood structures based on contiguity. We might also want to edit the output of a condition-based neighbourhood structure. It might be appropriate to add or remove connections to take account of infrastructure links or other domain-specific issues which are not apparent from a basic set of polygons. This package streamlines these processes with tools to account for the presence of islands and to intuitively make manual alterations to neighbourhood structures with the help of convenient mapping functions. Beyond the setting up of a satisfactory neighbourhood structure, it has further helper functions specific to the \texttt{mgcv} package which reduce the human workload required to extract estimates from models with spatial and hierarchical structures.
+Fitting areal models which use a spatial weights matrix to represent relationships between geographical units can be a cumbersome task, particularly when these units are not well-behaved. The two chief aims of \texttt{sfislands} are to simplify the process of creating an appropriate neighbourhood matrix, and to quickly visualise the predictions of subsequent models. The package uses visual aids in the form of easily-generated maps to help this process. This paper demonstrates how \texttt{sfislands} could be useful to researchers. It begins by describing the package's functions in the context of a proposed workflow. It then presents three worked examples showing a selection of potential use-cases. These range from earthquakes in Indonesia, to river crossings in London, and hierarchical models of output areas in Liverpool. We aim to show how the \texttt{sfislands} package streamlines much of the human workflow involved in creating and examining such models.
 }
 
 \hypertarget{introduction}{%
@@ -29,7 +29,7 @@ constraint. It is the job of the modeller to formulate a hypothesis
 which justifies their choice of neighbourhood structure.
 
 For R users, the \CRANpkg{spdep} package (Bivand et al. 2005) has long been popular for the
-creation of these matrices. More recently, with the increasing use of \CRANpkg{sf}
+creation of these matrices. More recently, with the increasing use of \CRANpkg{sf} (Pebesma 2018)
 structures and their compatibility with the \CRANpkg{tidyverse} (Wickham et al. 2019), the \CRANpkg{sfdep} package (Parry and Locke 2024) has presented the same
 functionality in addition to extra features in a tidy structure based on
 lists in a similar way to \CRANpkg{sf}.
@@ -44,16 +44,16 @@ units are described, areas on either sides of rivers may be
 inappropriately classified as neighbours or not neighbours. Furthermore,
 the presence of infrastructure such as tunnels, bridges or ferry
 services might be satisfactory to meet our hypothesis of the required
-degree of connectivity to be considered neighbours. Again, such information will not be found in a set of polygons.
+degree of connectivity to be considered neighbours. Again, such information will may not be apparent from a basic set of polygons. In order to create what a researcher considers to be an appropriate neighbourhood structure, incorporating all of the domain knowledge that they might have about the system, it should be simple and intuitive to add and remove connections between spatial units. This might mean adding links to account for man-made infrastructure, or cutting links to incorporate natural barriers such as rivers or mountains.
 
 The aim of \texttt{sfislands} is to deal with the situations described above in a
 convenient and open manner. It allows us to set up a structure, quickly
-map it, and then examine whether or not it is consistent with our hypothesis of relationships between units. The structure can then be edited and the process re-iterated until we have described a
+map it, and then examine whether or not we are happy with how it represents our hypothesis of relationships between units. The structure can then be edited and the process re-iterated until we have described a
 spatial relationship structure with which we are satisfied.
 
 The above can be considered as the \emph{pre-functions} of the package. A
 second category of features, which we refer to as \emph{post-functions},
-are for use with the \CRANpkg{mgcv} package (Wood 2011). Having fit a model with \CRANpkg{mgcv}, the process of extracting estimates for certain types of effects can be somewhat awkward. These \emph{post-functions} augment the original dataframe with these estimates and their standard errors in tidy format. They also allow for quick visualisation of the output in map form.
+are for use after the creation of a model. Having fit a model with \CRANpkg{mgcv} (Wood 2011) in particular, the process of extracting estimates for certain types of effects can be somewhat awkward. These \emph{post-functions} augment the original dataframe with these estimates and their standard errors in tidy format. They also allow for quick visualisation of the output in map form.
 
 \hypertarget{typical-use-cases}{%
 \subsection{Typical use-cases}\label{typical-use-cases}}
@@ -61,7 +61,7 @@ are for use with the \CRANpkg{mgcv} package (Wood 2011). Having fit a model with
 In this paper, we will look at three examples to show different use-cases for
 \texttt{sfislands}. The first example focuses on earthquakes in
 Indonesia. It shows a scenario where all of the functions are used, from
-setting up contiguities, to modelling and examining the estimates of the
+setting up contiguities, to modelling and examining the predictions of the
 model.
 
 The second example looks at London and how, despite the lack of islands,
@@ -69,18 +69,12 @@ the presence of a river means that some of the pre-functions of
 \texttt{sfislands} can be useful.
 
 The final example focuses on Liverpool. There are no islands or issues
-of discontiguity in this dataset. Instead, we will show how the package
-can be used to fit a multilevel model with an ICAR component at the lowest
-level. We show how the results can be presented in tidy form and quickly
-visualised. We also show how different types of contiguity from the
-\CRANpkg{sfdep} package can used within the \CRANpkg{mgcv} modelling
-framework and how the estimates derived from them can be conveniently
-compared.
+of discontiguity in this dataset. Instead, this example shows how the package can be used to quickly fit a set of reasonably complex multilevel models, with or without a spatially autocorrelated component at the lowest level, and how the results can be presented in tidy format and quickly visualised. This example also gives an opportunity to show how, when different types of contiguity from, say, the \CRANpkg{spdep} package are used in an otherwise equivalent model, the \texttt{sfislands} post-functions make it very straightforward to quickly compare the different predictions generated from different structures.
 
 \hypertarget{why-use-sfislands}{%
 \section{\texorpdfstring{Why use \texttt{sfislands}?}{Why use sfislands?}}\label{why-use-sfislands}}
 
-It greatly speeds up each stage of a proposed workflow for fitting areal spatial models.
+Below, we outline some of the benefits of the package in the context of a proposed workflow for fitting areal spatial models.
 
 \hypertarget{step-1-pre-functions-for-setting-up-neighbourhood-structure}{%
 \subsubsection{\texorpdfstring{Step 1: \emph{Pre-functions} for setting up neighbourhood structure}{Step 1: Pre-functions for setting up neighbourhood structure}}\label{step-1-pre-functions-for-setting-up-neighbourhood-structure}}
@@ -104,13 +98,13 @@ It greatly speeds up each stage of a proposed workflow for fitting areal spatial
 
 These neighbourhood structures can be used in modelling packages such as \CRANpkg{mgcv}, \CRANpkg{brms} (Bürkner 2017), \pkg{r-inla} (Bakka et al. 2018) and more.
 
-\hypertarget{step-3-post-functions-for-mgcv-models}{%
-\subsubsection{\texorpdfstring{Step 3: \emph{Post-functions} for \texttt{mgcv} models}{Step 3: Post-functions for mgcv models}}\label{step-3-post-functions-for-mgcv-models}}
+\hypertarget{step-3-post-functions-for-models}{%
+\subsubsection{\texorpdfstring{Step 3: \emph{Post-functions} for models}{Step 3: Post-functions for models}}\label{step-3-post-functions-for-models}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  It simplifies the process of extracting estimates from models with random effects and Markov random field structures (ICAR models).
+  It simplifies the process of extracting estimates from models, such as those with random effects and Markov random field structures created using \CRANpkg{mgcv}. Compatibility with more packages can be added at a future date.
 \item
   These effects can be quickly visualised as \CRANpkg{ggplot2} maps.
 \end{enumerate}
@@ -163,7 +157,7 @@ We will now go through each function in more detail using the set of rectangles 
 
 This function requires at least two arguments: an \CRANpkg{sf} dataframe and, from that, the name of one column of unique identifiers, ideally names, of each spatial unit. It creates a neighbourhood structure where non-island units are joined by first-order queen contiguity, while island units are joined to their k-nearest neighbours. The output is a \emph{named} neighbourhood structure in either list or matrix form as desired, which can be either a standalone object or included as an additional column in the original \CRANpkg{sf} dataframe. While it is not necessary in all modelling packages for the neighbourhood list or matrix to be \emph{named}, it is good practice to do so and is mandatory when using, for example, \CRANpkg{mgcv}.
 
-In the first two examples of using \texttt{st\_bridges()}, we have chosen to ignore islands with the argument \texttt{remove\_islands\ =\ TRUE} and to return a list and matrix structure respectively by specifying this in the \texttt{nb\_structure} argument and choosing \texttt{add\_to\_dataframe\ =\ FALSE}:
+One solution when confronted with islands in a dataset is to simply exclude them from the analysis. In the first two examples of using \texttt{st\_bridges()}, we have chosen to ignore islands with the argument \texttt{remove\_islands\ =\ TRUE} and to return a list and matrix structure respectively by specifying this in the \texttt{nb\_structure} argument and choosing \texttt{add\_to\_dataframe\ =\ FALSE}:
 
 \begin{verbatim}
 # output a named list
@@ -378,7 +372,7 @@ st_bridges(rectangles, "name",
 \caption{With an additional connection between 1 and 2. }\label{fig:rects5}
 \end{figure}
 
-The use of these neighbourhood structures is particularly associated with CAR-type models.
+Having decided upon an appropriate neighbourhood structure, the next step is to use this in the context of a model. The use of such structures is particularly associated with CAR-type (conditional autoregressive) models.
 These are often implemented in a Bayesian framework using
 \CRANpkg{brms}, \pkg{r-inla} or \pkg{rstan}. For example, the \CRANpkg{brms} ICAR structure requires the neighbourhood relationships to be in matrix form. The pre-functions will output the
 neighbourhood structure in the desired format for use in any of these
@@ -416,7 +410,7 @@ st\_quickmap\_preds() & generate quick maps of these predictions\\
 
 This function augments the original dataframe with the estimated means
 and standard errors of the spatially varying predictions from a fitted \CRANpkg{mgcv} model in a similar manner to
-how the \CRANpkg{broom} package (Robinson, Hayes, and Couch 2023) operates. The \texttt{geometry} column, as per convention, remains as the last column of the augmented dataframe, while the predictions are positioned immediately before it. \footnote{In a similar way, \texttt{st\_augment()} can also be used to append the random effects from \texttt{lme4} and \texttt{nlme} models to an \texttt{sf} dataframe, which can then be easily mapped using \texttt{st\_quickmap\_preds()}.} The spatially varying predictions which \texttt{st\_augment()} extracts from an \CRANpkg{mgcv} model are
+how the \CRANpkg{broom} package (Robinson, Hayes, and Couch 2023) operates. The \texttt{geometry} column, as per convention, remains as the last column of the augmented dataframe, while the predictions are positioned immediately before it. \footnote{In a similar way, \texttt{st\_augment()} can also be used to append the random effects from \CRANpkg{lme4} (Bates et al. 2015) and \CRANpkg{nlme} (Pinheiro, Bates, and R Core Team 2023) models to an \texttt{sf} dataframe, which can then be easily mapped using \texttt{st\_quickmap\_preds()}. Compatability with models created using different packages can be introduced in the future.} The spatially varying predictions which \texttt{st\_augment()} extracts from an \CRANpkg{mgcv} model are
 
 \begin{itemize}
 \tightlist
@@ -447,7 +441,7 @@ mgcv::gam(
   method = "REML")
 \end{verbatim}
 
-When labelling the new prediction columns which are augmented to the original dataframe from such a model, \texttt{st\_augment()} follows the formula syntax of the \CRANpkg{lme4} package (Bates et al. 2015), where the pipe symbol (\texttt{\textbar{}}) indicates ``\emph{grouped by}''. Table \ref{tab:staugtab-latex} shows how the augmented columns in this scenario would be named. Each column name begins with either \texttt{random.effect.} or \texttt{mrf.smooth.} as appropriate. An additional column is also added for the standard error of each estimate, as calculated by \CRANpkg{mgcv}. These columns are named as above but with \texttt{se.} prepended (e.g.~\texttt{se.random.effect.region}).
+When labelling the new prediction columns which are augmented to the original dataframe from such a model, \texttt{st\_augment()} follows the formula syntax of the \CRANpkg{lme4} package (Bates et al. 2015), where the pipe symbol (\texttt{\textbar{}}) indicates ``\emph{grouped by}''. Table \ref{tab:staugtab-latex} shows how the augmented columns in this scenario would be named. Each column name begins with either \texttt{random.effect.} or \texttt{mrf.smooth.} as appropriate. An additional column is also added for the standard error of each prediction, as calculated by \CRANpkg{mgcv}. These columns are named as above but with \texttt{se.} prepended (e.g.~\texttt{se.random.effect.region}).
 
 \begin{table}
 
@@ -472,7 +466,7 @@ s(sub-region, by = covariate, bs = 'mrf', xt = list(nb = data\$nb) & mrf.smooth.
 \hypertarget{st_quickmap_preds}{%
 \subsection{st\_quickmap\_preds()}\label{st_quickmap_preds}}
 
-These estimates can then be quickly mapped. As it is possible to include more than 1 spatially varying component, the output of this function is a list of plots. They can be viewed individually by indexing, or all at one using, for example, the \texttt{plotlist} argument from the \texttt{ggarrange()} function which is part of the \CRANpkg{ggpubr} (Kassambara 2023) package. We will see this function in practice in the following examples. The maps which it generates are automatically titled and subtitled according to the type of effect. For example, the map showing predictions for \texttt{random.effect.region} will have ``\emph{region}'' as its title and ``\emph{random.effect}'' as its subtitle.
+These estimates can then be quickly mapped. As it is possible to include more than 1 spatially varying component, the output of this function is a list of plots. They can be viewed individually by indexing, or all at once using, for example, the \texttt{plotlist} argument from the \texttt{ggarrange()} function which is part of the \CRANpkg{ggpubr} (Kassambara 2023) package. We will see this function in practice in the following examples. The maps which it generates are automatically titled and subtitled according to the type of effect. For example, the map showing predictions for \texttt{random.effect.region} will have ``\emph{region}'' as its title and ``\emph{random.effect}'' as its subtitle.
 
 \hypertarget{example-1-indonesia}{%
 \section{Example 1: Indonesia}\label{example-1-indonesia}}
@@ -558,7 +552,7 @@ The occurrences of these earthquakes are shown in Figure \ref{fig:quake-occur}, 
 \hypertarget{model}{%
 \subsection{Model}\label{model}}
 
-As this is count data, we will model it as a poisson distribution with
+As this is count data, we will model it as a Poisson distribution with
 \(\lambda\) as the mean count per province. For \(i = 1,...,n\) provinces,
 the dependent variable in this model is
 \begin{equation}
@@ -571,7 +565,7 @@ x_i = \text{fault concentration}_i = \frac{\text{area of buffered faults in prov
 \label{eq:eq2}
 \end{equation}
 Firstly, when excluding the incidence and just modelling counts, where
-\(y_i = \text{earthquake count in province}_i\), the poisson model is of
+\(y_i = \text{earthquake count in province}_i\), the Poisson model is of
 the following form:
 \begin{equation}
 y_i | \lambda_i \sim \text{Pois}(\lambda_i)
@@ -593,7 +587,7 @@ relative to other provinces.
 
 We can describe these relationships by setting up a neighbourhood
 structure based on queen contiguity where a pair of provinces are
-considered neighbours if they share at least one point of boundary. This can be modelled as a Markov random field to generate an ICAR model with a spatially varying term. Each of these terms will be correlated with the others according to the neighbourhood structure we have defined.
+considered neighbours if they share at least one point of boundary. This can be modelled as a Markov random field to generate an intrinsic CAR (ICAR) model with a spatially varying term. Each of these terms will be correlated with the others according to the neighbourhood structure we have defined.
 
 The Markov random field here follows a multivariate Gaussian
 distribution. \(\gamma_i\) is a vector of province effects having a
@@ -636,7 +630,7 @@ Having described the type of model we wish to implement, we now show how \texttt
 \hypertarget{pre-functions-1}{%
 \subsection{Pre-functions}\label{pre-functions-1}}
 
-Such models, however, can not deal with locations which have no
+Such models, however, can not incorporate locations which have no
 neighbours. In the case of Indonesia, this is quite problematic. It is
 composed of many islands. The estimated count of
 islands according to Andréfouët, Paul, and Farhan (2022) is 13,558.
@@ -697,22 +691,6 @@ show concave hulls drawn around each unit (using \texttt{concavehull\ =\ TRUE}).
 
 
 
-\begin{verbatim}
-# with 'concavehull = TRUE' and 'nodes = "numeric"'
-
-st_bridges(provinces_df, "province",link_islands_k = 2) |> 
-  st_quickmap_nb(fillcol = "antiquewhite1", 
-                 bordercol = "black", bordersize = 0.5, 
-                 linkcol = "tomato", linksize = 0.5, 
-                 nodes = "numeric", 
-                 numericcol = "black", numericsize = 6, 
-                 concavehull = TRUE, 
-                 hullcol = "darkgreen", hullsize = 0.2) + 
-  theme(panel.background = element_rect(fill = "#ECF6F7", colour = "black", 
-                                        linewidth=1.5),
-        axis.text = element_blank())
-\end{verbatim}
-
 \begin{figure}
 
 {\centering \includegraphics[width=1\linewidth]{article_files/figure-latex/ind-contig2-1} 
@@ -738,7 +716,7 @@ st_bridges(provinces_df, "province",link_islands_k = 2) |>
         axis.text = element_blank())
 \end{verbatim}
 
-Having made some manual adjustments to the neighbourhood structure, the
+Having made some manual adjustments to the neighbourhood structure, outlined in the code below, the
 new structure can be seen in Figure \ref{fig:ind-contig3}. Edge effects
 have also been mitigated by imposing additional connections on the two extreme
 provinces (1 and 23), which would otherwise have only one neighbour, so that they now also include
@@ -795,12 +773,12 @@ We now create the ICAR model using, in this case, the \CRANpkg{mgcv} package. We
 \begin{verbatim}
 mod_pois_mrf <- gam(damaging_quakes_total ~ 
                       fault_concentration +
-                      s(province, bs='mrf', xt=list(nb=prep_data$nb), k=22) +
+                      s(province, bs='mrf', xt=list(nb=prep_data$nb), k=24) +
                       offset(log(area_province)),
                     data=prep_data, method="REML",family = "poisson")
 \end{verbatim}
 
-We can see from the summary below that the adjusted R-squared is \textbf{0.957} and deviance explained is \textbf{88.2\%}.
+We can see from the summary below that the adjusted R-squared is \textbf{0.983} and deviance explained is \textbf{93.3\%}. The coefficient for \texttt{fault\_concentration} confirms an expected positive mean global association between earthquake and fault incidence.
 
 \begin{verbatim}
 #> 
@@ -809,29 +787,26 @@ We can see from the summary below that the adjusted R-squared is \textbf{0.957} 
 #> 
 #> Formula:
 #> damaging_quakes_total ~ fault_concentration + s(province, bs = "mrf", 
-#>     xt = list(nb = prep_data$nb), k = 22) + offset(log(area_province))
+#>     xt = list(nb = prep_data$nb), k = 24) + offset(log(area_province))
 #> 
 #> Parametric coefficients:
 #>                     Estimate Std. Error z value Pr(>|z|)    
-#> (Intercept)          -9.1066     0.1428 -63.774   <2e-16 ***
-#> fault_concentration  -3.2355     1.3297  -2.433    0.015 *  
+#> (Intercept)          -9.5648     0.1744 -54.845  < 2e-16 ***
+#> fault_concentration   5.9971     1.9245   3.116  0.00183 ** 
 #> ---
 #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #> 
 #> Approximate significance of smooth terms:
 #>               edf Ref.df Chi.sq p-value    
-#> s(province) 18.94     21  147.7  <2e-16 ***
+#> s(province) 19.19     23  166.6  <2e-16 ***
 #> ---
 #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #> 
-#> R-sq.(adj) =  0.957   Deviance explained = 88.2%
-#> -REML = 119.75  Scale est. = 1         n = 33
+#> R-sq.(adj) =  0.983   Deviance explained = 93.3%
+#> -REML = 104.81  Scale est. = 1         n = 33
 \end{verbatim}
 
-Controlling for the concentration of faults, what is the additional risk level of
-earthquakes in a province? This can be seen as a measure of the activity
-level of faults locally and it is spatially smoothed by the
-autoregressive process. It is represented in the model summary by the component \texttt{s(province)}. However, the extraction of individual predictions for this component for each province from the \texttt{mgcv} model requires a number of steps. We know demonstrate how these are streamlined into a single function by the \texttt{sfislands} package.
+Regardless of this, having controlled for the concentration of faults, what is the additional risk level of earthquakes in a province? This can be seen as a measure of the activity level of faults locally and it is spatially smoothed by the autoregressive process. It is represented in the model summary by the component \texttt{s(province)}. However, the extraction of individual predictions for this component for each province from the \texttt{mgcv} model requires a number of steps. We now demonstrate how these are streamlined into a single function by the \texttt{sfislands} package.
 
 \hypertarget{post-functions-1}{%
 \subsection{Post-functions}\label{post-functions-1}}
@@ -902,14 +877,14 @@ plot_mrf[[1]] +
 \caption{Estimates of \(\gamma_i\) shown as a map using \texttt{st\_quickmap\_preds()}.}\label{fig:ind-mrf1}
 \end{figure}
 
-If we wish to apply the inverse link function (the exponential function in the case of this poisson model) to map these values to a more interpretable scale, this will not be generated by the function \texttt{st\_quickmap\_preds()}. Instead, we must use the augmented dataframe which is produced by \texttt{st\_augment()} and create the appropriate extra column with the usual \CRANpkg{tidyverse} \texttt{mutate()} function. This allows us to produce the map in Figure
+If we wish to apply the inverse link function (the exponential function in the case of this Poisson model) to map these values to a more interpretable scale, this will not be generated by the function \texttt{st\_quickmap\_preds()}. Instead, we must use the augmented dataframe which is produced by \texttt{st\_augment()} and create the appropriate extra column with the usual \CRANpkg{tidyverse} \texttt{mutate()} function. This allows us to produce the map in Figure
 \ref{fig:ind-mrf2}. As these coefficients are multiplicatively related
 to the earthquake incidence, values below 1 imply an earthquake
 incidence which is lower than expected.
 
 The provinces with the 3 most elevated incidences are labelled in red
 We can see that, controlling for the effects of proximity to
-faults, the province of Aceh has 7.9 times the expected
+faults, the province of Nusa Tenggara Barat has 8.7 times the expected
 incidence, or number of major earthquakes per square kilometre. The two
 lowest-scoring provinces, labelled in green, have essentially no incidence of
 earthquake epicentres within their boundaries, controlling for what their proximity to faults alone would
@@ -963,8 +938,7 @@ function is applied to them to construct a queen contiguity
 neighbourhood structure. Because there are no disjoint units (or
 ``islands''), this will be the same as using \texttt{st\_contiguity()} from
 \CRANpkg{sfdep}. The \texttt{st\_quickmap\_nb()} function gives an immediate
-visual representation of the structure. \footnote{\texttt{st\_quickmap\_nb()} can also be used to visualise any contiguity structure created by \texttt{spdep} or \texttt{sfdep} as long as that structure is included in an \texttt{sf} dataframe as a column named \texttt{nb}.} This can be supplemented by
-adding a layer showing the course of the river Thames which is also visible in Figure \ref{fig:lon-contig1}.
+visual representation of the structure. \footnote{\texttt{st\_quickmap\_nb()} can also be used to visualise any contiguity structure created by \texttt{spdep} or \texttt{sfdep} as long as that structure is included in an \texttt{sf} dataframe as a column named \texttt{nb}.} Because this map is created using \CRANpkg{ggplot2}, it can be easily supplemented by adding a layer showing the course of the river Thames which is also visible in Figure \ref{fig:lon-contig1}.
 
 \begin{verbatim}
 # same as sfdep:st_contiguity() as there are no islands
@@ -1018,8 +992,7 @@ st_bridges(london[riverside,],"NAME") |>
 \caption{Riverside boroughs of Greater London. Queen contiguity disregarding river. }\label{fig:lon-contig2}
 \end{figure}
 
-In order to take account of actual connectivity, we can add a layer
-showing the road and pedestrian bridges or tunnels. Details of these were sourced Wikipedia (2024), which describes the various crossings of the river Thames. In Figure \ref{fig:lon-crossings}, we have also drawn a 1 kilometre buffer around each crossing. This was chosen as an arbitrary measure of what might be considered a ``reasonable'' distance within which to consider opposing banks as being connected. The vast majority of units on opposing banks have access to a river crossing within this threshold and thus should be considered as neighbours. Only the extreme eastern units and one to the south west should not have a connection across the river.
+In order to take account of actual connectivity, we can add a layer showing the road and pedestrian bridges or tunnels. Details of these were sourced from the Wikipedia (2024) article titled ``\emph{List of crossings of the River Thames}''. In Figure \ref{fig:lon-crossings}, we have also drawn a 1 kilometre buffer around each crossing. This was chosen as an arbitrary measure of what might be considered a ``reasonable'' distance within which to consider opposing banks as being connected. The vast majority of units on opposing banks have access to a river crossing within this threshold and thus should be considered as neighbours. Only the extreme eastern units and one to the south west should not have a connection across the river according to this criterion.
 
 \begin{figure}
 
@@ -1120,7 +1093,7 @@ We will show how their outcomes can be quickly mapped to give an immediate sense
 
 This example is based on data from the \href{https://www.nomisweb.co.uk/home/census2001.asp}{Office of National Statistics} as presented by Rowe and Arribas-Bel (2024) in their demonstration of techniques for hierarchical spatial regression. They use the different levels of nested administrative boundaries in Liverpool for their demonstration. These are described in Table \ref{tab:livadmin-latex}, and are mapped separately in Figure \ref{fig:liv-nested}.
 
-Now suppose we wish to model unemployment as a function of limiting long-term illness, taking into account this hierarchical structure. Limiting long-term illness (LLTI) refers to a health problem or disability which limits a person's day-to-day activities (Barnett 2001). We wish to incorporate a fixed intercept and coefficient for LLTI, with additional random intercepts and slopes at MSOA and LSOA levels. The raw distribution of these variables across the output areas (OAs) of Liverpool are shown in Figure
+Now suppose we wish to model unemployment as a function of limiting long-term illness, taking into account this hierarchical structure. Limiting long-term illness (LLTI) refers to a health problem or disability which limits a person's day-to-day activities (Barnett 2001). We wish to incorporate a fixed intercept and coefficient for LLTI, with additional random intercepts and slopes at different levels. The raw distribution of these variables across the output areas (OAs) of Liverpool are shown in Figure
 \ref{fig:liv-vars}.
 
 If \(y_{ijk}\) and \(x_{ijk}\) are respectively the levels of unemployment and LLTI in each of \(i\) OAs within \(j\) lower level super output areas (LSOAs), which in turn are within \(k\) middle level super output areas (MSOAs), then
@@ -1282,7 +1255,7 @@ hierachical model, no ICAR & -5082.684 & -0.991\\
 \hypertarget{summary}{%
 \section{Summary}\label{summary}}
 
-These examples have shown the varying scenarios in which \texttt{sfislands} can be useful. It aims to contribute to spatial modelling by making an awkward area less awkward. Rather than having a default attitude of ignoring islands when building neighbourhood structures based on contiguity, it hopes to encourage at least an examination of whether or not it is appropriate for them to be included. It also provides helper functions to use these structures in spatial regression models built with \texttt{mgcv} which streamline the human effort necessary to examine the estimates.
+These examples have shown the varying scenarios in which \texttt{sfislands} can be useful. It aims to contribute to spatial modelling by making an awkward area less awkward. Rather than having a default attitude of ignoring islands when building neighbourhood structures based on contiguity, it hopes to encourage at least an examination of whether or not it is appropriate for them to be included. It also provides helper functions to use these structures in spatial regression models built with \CRANpkg{mgcv} which streamline the human effort necessary to examine the estimates. In future, compatibility with other modelling packages can be added to broaden the package's capabilities.
 
 \hypertarget{acknowledgements}{%
 \section{Acknowledgements}\label{acknowledgements}}
@@ -1327,6 +1300,12 @@ Kassambara, Alboukadel. 2023. \emph{Ggpubr: 'Ggplot2' Based Publication Ready Pl
 
 \leavevmode\vadjust pre{\hypertarget{ref-sfdep}{}}%
 Parry, Josiah, and Dexter H Locke. 2024. \emph{Sfdep: Spatial Dependence for Simple Features}. \url{https://sfdep.josiahparry.com}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-sf}{}}%
+Pebesma, Edzer. 2018. {``{Simple Features for R: Standardized Support for Spatial Vector Data}.''} \emph{{The R Journal}} 10 (1): 439--46. \url{https://doi.org/10.32614/RJ-2018-009}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-nlme}{}}%
+Pinheiro, José, Douglas Bates, and R Core Team. 2023. \emph{Nlme: Linear and Nonlinear Mixed Effects Models}. \url{https://CRAN.R-project.org/package=nlme}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-broom}{}}%
 Robinson, David, Alex Hayes, and Simon Couch. 2023. {``Broom: Convert Statistical Objects into Tidy Tibbles.''} \url{https://CRAN.R-project.org/package=broom}.

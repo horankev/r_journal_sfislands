@@ -423,7 +423,7 @@ st_bridges(provinces_df, "province",link_islands_k = 2) |>
 #> 
 
 
-## ---- ind-contig2, fig.width=12, fig.height=6, echo=TRUE, out.width="100%", eval=knitr::is_latex_output(), fig.cap = "(ref:my-caption2)"----
+## ---- ind-contig2, fig.width=12, fig.height=6, echo=FALSE, out.width="100%", eval=knitr::is_latex_output(), fig.cap = "(ref:my-caption2)"----
 # with 'concavehull = TRUE' and 'nodes = "numeric"'
 
 st_bridges(provinces_df, "province",link_islands_k = 2) |> 
@@ -551,7 +551,7 @@ prep_data <- st_bridges(provinces_df, "province",link_islands_k = 2) |>
 
 mod_pois_mrf <- gam(damaging_quakes_total ~ 
                       fault_concentration +
-                      s(province, bs='mrf', xt=list(nb=prep_data$nb), k=22) +
+                      s(province, bs='mrf', xt=list(nb=prep_data$nb), k=24) +
                       offset(log(area_province)),
                     data=prep_data, method="REML",family = "poisson")
 
