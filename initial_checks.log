@@ -1,0 +1,244 @@
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: Rlogo-5.png.
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+ERROR: Section Example 1: Indonesia, Example 2: London, Example 3: Liverpool is not in sentence case!
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: neighbouring, neighbour, neighbourliness, neighbours, modeller, neighbourhood, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, visualise, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, hierachical, acknowledgements, inla, lme, brms, sfislands, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+ERROR: Package(s) available on CRAN: rstan.
+please use \CRANpkg rather than \pkg.
+SUCCESS: All packages marked-up with \CRANpkg or \BIOpkg are available on CRAN or Bioconductor.
+NOTE: 2 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla, rstan
+WARNING: Citation should include a link to the reference, preferably a
+DOI, unless online resources cannot be found.
+References without DOI or URL: spdep, bhattacharjee2005, getis2004constructing, wikicrossings.
+SUCCESS: No customised csl file used. Good!
+ERROR: Please use a fixed article's date in the format of `%Y-%m-%d`,
+e.g. 2023-10-05. The date should match the date when the article
+is submitted. Dynamic date can cause issues on issue rendering.
+
+SUCCESS: 6 | NOTE: 2 | WARNING: 1 | ERROR: 7
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: .
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+ERROR: Section Example 1: Indonesia, Example 2: London, Example 3: Liverpool is not in sentence case!
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: neighbouring, neighbour, neighbourliness, neighbours, modeller, neighbourhood, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, visualise, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, hierachical, acknowledgements, inla, lme, brms, sfislands, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+ERROR: Package(s) available on CRAN: rstan.
+please use \CRANpkg rather than \pkg.
+SUCCESS: All packages marked-up with \CRANpkg or \BIOpkg are available on CRAN or Bioconductor.
+NOTE: 2 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla, rstan
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+ERROR: Please use a fixed article's date in the format of `%Y-%m-%d`,
+e.g. 2023-10-05. The date should match the date when the article
+is submitted. Dynamic date can cause issues on issue rendering.
+
+SUCCESS: 7 | NOTE: 2 | WARNING: 0 | ERROR: 7
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: Rlogo-5.png.
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+ERROR: Section Example 1: Indonesia, Example 2: London, Example 3: Liverpool is not in sentence case!
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: sfislands, neighbourhood, visualise, neighbouring, neighbour, neighbourliness, neighbours, modeller, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+SUCCESS: All packages marked-up with \CRANpkg or \BIOpkg are available on CRAN or Bioconductor.
+NOTE: 1 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+ERROR: Please use a fixed article's date in the format of `%Y-%m-%d`,
+e.g. 2023-10-05. The date should match the date when the article
+is submitted. Dynamic date can cause issues on issue rendering.
+
+SUCCESS: 8 | NOTE: 2 | WARNING: 0 | ERROR: 6
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: .
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+ERROR: Section Example 1: Indonesia, Example 2: London, Example 3: Liverpool is not in sentence case!
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: sfislands, neighbourhood, visualise, neighbouring, neighbour, neighbourliness, neighbours, modeller, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+SUCCESS: All packages marked-up with \CRANpkg or \BIOpkg are available on CRAN or Bioconductor.
+NOTE: 1 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+SUCCESS: Article date is set fixed at the article submission date.
+
+SUCCESS: 9 | NOTE: 2 | WARNING: 0 | ERROR: 5
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: .
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+SUCCESS: Section titles formatted in sentence case.
+SUCCESS: Abstract formatted in plain text.
+NOTE: A potential list of spelling to check: sfislands, neighbourhood, visualise, neighbouring, neighbour, neighbourliness, neighbours, modeller, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+SUCCESS: All packages marked-up with \CRANpkg or \BIOpkg are available on CRAN or Bioconductor.
+NOTE: 1 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+SUCCESS: Article date is set fixed at the article submission date.
+
+SUCCESS: 11 | NOTE: 2 | WARNING: 0 | ERROR: 3
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: Rlogo-5.png.
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+SUCCESS: Section titles formatted in sentence case.
+SUCCESS: Abstract formatted in plain text.
+NOTE: A potential list of spelling to check: sfislands, neighbourhood, visualise, neighbouring, neighbour, neighbourliness, neighbours, modeller, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+SUCCESS: All packages marked-up with \CRANpkg or \BIOpkg are available on CRAN or Bioconductor.
+NOTE: 1 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla
+WARNING: Citation should include a link to the reference, preferably a
+DOI, unless online resources cannot be found.
+References without DOI or URL: ggmagnify, knitr2014, mgcv2011, mgcv2016, mgcv2004, mgcv2017, mgcv2003, sfislands, sfislands, ggmagnify, knitr2014, mgcv2011, mgcv2016, mgcv2004, mgcv2017, mgcv2003.
+SUCCESS: No customised csl file used. Good!
+SUCCESS: Article date is set fixed at the article submission date.
+
+SUCCESS: 10 | NOTE: 2 | WARNING: 1 | ERROR: 3
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: Rlogo-5.png.
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+SUCCESS: Section titles formatted in sentence case.
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: sfislands, neighbourhood, visualise, neighbouring, neighbour, neighbourliness, neighbours, modeller, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, ggmagnify, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+ERROR: 1 of 14 package(s) not available on CRAN: ggmagnify
+NOTE: 1 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+ERROR: Please use a fixed article's date in the format of `%Y-%m-%d`,
+e.g. 2023-10-05. The date should match the date when the article
+is submitted. Dynamic date can cause issues on issue rendering.
+
+SUCCESS: 8 | NOTE: 2 | WARNING: 0 | ERROR: 6
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: Rlogo-5.png.
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+SUCCESS: Section titles formatted in sentence case.
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: sfislands, neighbourhood, visualise, neighbouring, neighbour, neighbourliness, neighbours, modeller, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, ggmagnify, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+ERROR: 1 of 14 package(s) not available on CRAN: ggmagnify
+NOTE: 1 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+ERROR: Please use a fixed article's date in the format of `%Y-%m-%d`,
+e.g. 2023-10-05. The date should match the date when the article
+is submitted. Dynamic date can cause issues on issue rendering.
+
+SUCCESS: 8 | NOTE: 2 | WARNING: 0 | ERROR: 6
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: Rlogo-5.png.
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter, motivation-letter.pdf
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+SUCCESS: Section titles formatted in sentence case.
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: sfislands, neighbourhood, visualise, neighbouring, neighbour, neighbourliness, neighbours, modeller, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, ggmagnify, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+ERROR: 1 of 14 package(s) not available on CRAN: ggmagnify
+NOTE: 1 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+SUCCESS: Article date is set fixed at the article submission date.
+
+SUCCESS: 9 | NOTE: 2 | WARNING: 0 | ERROR: 5
+
+Initial check results: 
+
+SUCCESS: Submission has consistently named tex, bib, and R files
+ERROR: There are nested subdirectories. Please use at most two directory levels for the article.
+ERROR: Image(s) detected in the main directory: Rlogo-5.png.
+They should be placed in the figures/ folder.
+SUCCESS: No problematic file found
+SUCCESS: Possible motivation letter found: motivation-letter
+ERROR: Article title not in title case! Suggest title: Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling.
+SUCCESS: Section titles formatted in sentence case.
+ERROR: Abstract should be plain text without package markups,
+mathmatic notations, citation, or other formattings.
+NOTE: A potential list of spelling to check: neighbouring, neighbour, neighbourliness, neighbours, modeller, neighbourhood, et, al, exclaves, visualisation, contiguities, modelling, pre, discontiguity, autocorrelated, visualised, visualise, labelled, discontiguities, quickmap, nb, bs, preds, mrf, labelling, mgcv, xt, plotlist, ggarrange, behaviour, catalogue, grey, kilometre, interpretable, linestrings, kilometres, unitless, epicentre, modelled, hypothesise, concavehull, multipolygons, multiplicatively, epicentres, london, spdep, sfdep, centroid, hypothesised, liverpool, centroids, metres, acknowledgements, inla, lme, brms, sfislands, ggmagnify, ggpubr, nlme, rstan, tobler, ggplot, tidyverse, wikicrossings, ikipedia
+SUCCESS: CRAN activities have been detected for package sfislands
+SUCCESS: No error with the use of \pkg markup.
+SUCCESS: All packages marked-up with \CRANpkg or \BIOpkg are available on CRAN or Bioconductor.
+NOTE: 2 package(s) used in the text without \CRANpkg or \BIOpkg commands: r-inla, ggmagnify
+SUCCESS: All the references contain DOI or URL
+SUCCESS: No customised csl file used. Good!
+SUCCESS: Article date is set fixed at the article submission date.
+
+SUCCESS: 10 | NOTE: 2 | WARNING: 0 | ERROR: 4
+
