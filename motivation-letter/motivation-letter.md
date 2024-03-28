@@ -10,14 +10,14 @@ Editor
 The R Journal  
 \bigskip
 
-Dear Professor Cook,
+Dear Editor,
 \bigskip
 
-Please consider our article titled "ToOoOlTiPs: An R Package for Customizable Tooltips in Interactive Graphics" for publication in the R Journal.
+Please consider our article titled "sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling" for publication in the R Journal.
 
-The manuscript introduces the new package called `ToOoOlTiPs` which provides examples on how to use interactive graphics in journal articles, and general tips for making an interesting contribution.
+The manuscript introduces the new package for spatial modelling called `sfislands` which provides a set of helper functions to streamline the human workload in preparing autoregressive and/or hierarchical areal models, and the subsequent extraction and visualisation of their results. It does this by making the construction of neighbourhood matrices more intuitive, especially in the presence of islands, and by allowing a piped workflow from initial dataset to model outputs and visualisations. It places an emphasis on the ability to quickly visualise both the inputs and outputs of spatial models, which is otherwise quite cumbersome.
 
-We believe the readers of the R Journal will find this article helpful for their work because it provides generally useful instructions that will work for many purposes. 
+We believe the readers of the R Journal will find this article helpful for their work because it outlines a versatile system which can be used in a broad range of scenarios in spatial analysis, some of which are demonstrated through worked examples. It is quite common on help sites such as *stackoverflow* to see many frustrated researchers not being able to run spatial autoregressive models because of often insignificant discontiguities between spatial units in their dataset. It is also common to see people having difficulties extracting estimated spatially varying coefficients from `mgcv` models. This package reduces *barriers to entry* by overcoming these issues and producing results quickly while also allowing for more forensic construction of neighbourhood structures should this be desired. 
 
 \bigskip
 \bigskip
@@ -27,15 +27,13 @@ Regards,
     
     
     
-Quietest Quokka  
-Department of Letter Q  
-University of Little Mates  
-Somewhere, Australia  
-qquo@ulm.edu
+Kevin Horan  
+Hamilton Institute  
+Maynooth University  
+Co. Kildare  
+Ireland  
+kevin.horan.2021@mumail.ie
 
 \bigskip
 
-NOTES: Modify this file with information about your article. 
 
-1. It may be invisible to you, so be aware that after each address line there are two spaces, this makes the line break correctly.
-2. It is also reasonable to submit an .md format of your motivating letter instead of a pdf. 

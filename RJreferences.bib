@@ -1,31 +1,38 @@
 % put bibtex entries here!
 @Manual{sfdep,
-  title = {sfdep: Spatial Dependence for Simple Features},
-  author = {Josiah Parry and Dexter H Locke},
+title = {{sfdep}: Spatial Dependence for Simple Features},
+  author = {Josiah Parry},
+  year = {2023},
+  note = {R package version 0.2.3},
+  url = {https://CRAN.R-project.org/package=sfdep},
+}
+
+@Manual{sfislands,
+title = {{sfislands}: Streamlines the Process of Fitting Areal Spatial Models},
+  author = {Kevin Horan and Katarina Domijan and Chris Brunsdon},
   year = {2024},
-  note = {R package version 0.2.4, https://github.com/josiahparry/sfdep},
-  url = {https://sfdep.josiahparry.com},
+  note = {https://github.com/horankev/sfislands},
+  url = {https://horankev.github.io/sfislands/},
 }
 
 @Article{sf,
-    author = {Edzer Pebesma},
-    title = {{Simple Features for R: Standardized Support for Spatial
-      Vector Data}},
-    year = {2018},
-    journal = {{The R Journal}},
-    doi = {10.32614/RJ-2018-009},
-    url = {https://doi.org/10.32614/RJ-2018-009},
-    pages = {439--446},
-    volume = {10},
-    number = {1},
-  }
+  author = {Edzer Pebesma},
+  title = {{Simple Features for R: Standardized Support for Spatial Vector Data}},
+  year = {2018},
+  journal = {{The R Journal}},
+  doi = {10.32614/RJ-2018-009},
+  url = {https://doi.org/10.32614/RJ-2018-009},
+  pages = {439--446},
+  volume = {10},
+  number = {1},
+}
 
 @Manual{ggpubr,
-  title = {ggpubr: 'ggplot2' Based Publication Ready Plots},
+title = {{ggpubr}: `{ggplot2}' Based Publication Ready Plots},
   author = {Alboukadel Kassambara},
   year = {2023},
   note = {R package version 0.6.0},
-  url = {https://rpkgs.datanovia.com/ggpubr/},
+  url = {https://CRAN.R-project.org/package=ggpubr},
 }
 
 @Article{lme4,
@@ -48,22 +55,25 @@
     url = {https://CRAN.R-project.org/package=nlme},
   }
 
+@Manual{ggmagnify,
+  title = {ggmagnify: Create a Magnified Inset of Part of a "Ggplot" Object},
+  author = {David Hugh-Jones},
+  year = {2024},
+  note = {R package version 0.4.0.9000,
+https://hughjonesd.github.io/ggmagnify/},
+  url = {https://github.com/hughjonesd/ggmagnify},
+}
+
 @Article{tidyverse,
-    title = {Welcome to the {tidyverse}},
-    author = {Hadley Wickham and Mara Averick and Jennifer Bryan and
-      Winston Chang and Lucy D'Agostino McGowan and Romain François and
-      Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester
-      and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan
-      Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson
-      and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and
-      Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
-    year = {2019},
-    journal = {Journal of Open Source Software},
-    volume = {4},
-    number = {43},
-    pages = {1686},
-    doi = {10.21105/joss.01686},
-  }
+  title = {Welcome to the {tidyverse}},
+  author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+  year = {2019},
+  journal = {Journal of Open Source Software},
+  volume = {4},
+  number = {43},
+  pages = {1686},
+  doi = {10.21105/joss.01686},
+}
 
 @article{mgcv,
 	title = {Fast stable restricted maximum likelihood and marginal
@@ -84,13 +94,17 @@ likelihood estimation of semiparametric generalized linear models},
 	url = {https://CRAN.R-project.org/package=broom}
 }
 
-@article{spdep,
-  title={The spdep package},
-  author={Bivand, Roger and Bernat, Andrew and Carvalho, Marilia and Chun, Yongwan and Dormann, Carsten and Dray, St{\'e}phane and Halbersma, Rein and Lewin-Koh, Nicholas and Ma, Jielai and Millo, Giovanni and others},
-  journal={Comprehensive R Archive Network, Version},
-  pages={05--83},
-  year={2005}
-}
+@Article{spdep,
+    title = {Computing the Jacobian in Gaussian spatial autoregressive
+      models: An illustrated comparison of available methods},
+    author = {Roger Bivand and Jan Hauke and Tomasz Kossowski},
+    journal = {Geographical Analysis},
+    year = {2013},
+    volume = {45},
+    number = {2},
+    pages = {150--179},
+    url = {http://www.jstatsoft.org/v63/i18/},
+  }
 
 @Article{brms,
     title = {{brms}: An {R} Package for {Bayesian} Multilevel Models
@@ -217,6 +231,7 @@ publisher = "Centre for Research into Industry, Enterprise, Finance and the Firm
 number = "0519",
 type = "WorkingPaper",
 institution = "Centre for Research into Industry, Enterprise, Finance and the Firm",
+  DOI = {10.1016/j.regsciurbeco.2013.03.005}
 }
 
 @article{getis2004constructing,
@@ -227,14 +242,15 @@ institution = "Centre for Research into Industry, Enterprise, Finance and the Fi
   number={2},
   pages={90--104},
   year={2004},
-  publisher={Wiley Online Library}
+  publisher={Wiley Online Library},
+  DOI={10.1007/978-3-642-01976-0_11}
 }
 
 @misc{liverpool-notes,
   author = "Rowe, Francisco and Arribas-Bel, Dani",
   title  = "{University of Liverpool, Spatial Modeling for Data Scientists, ENVS453, Course repository}",
   url = {https://gdsl-ul.github.io/san/},
-  note   = "Last visited on 2024/02/25",
+  note   = "Last visited on 2024-02-25",
   year   = 2024,
 }
 
@@ -272,6 +288,21 @@ institution = "Centre for Research into Industry, Enterprise, Finance and the Fi
    author = "Wikipedia",
    title = "{List of crossings of the River Thames} --- {W}ikipedia{,} The Free Encyclopedia",
    year = "2024",
-   howpublished = {\url{http://en.wikipedia.org/w/index.php?title=List\%20of\%20crossings\%20of\%20the\%20River\%20Thames&oldid=1184426738}},
-   note = "[Online; accessed 15-March-2024]"
+   url = {http://en.wikipedia.org/w/index.php?title=List\%20of\%20crossings\%20of\%20the\%20River\%20Thames&oldid=1184426738},
+   note = "[Online; accessed 2024-03-15]"
  }
+
+@article{besag,
+	title = {Spatial Interaction and the Statistical Analysis of Lattice Systems},
+	author = {Besag, Julian},
+	year = {1974},
+	date = {1974},
+	journal = {Journal of the Royal Statistical Society: Series B (Methodological)},
+	pages = {192--225},
+	volume = {36},
+	number = {2},
+	doi = {10.1111/j.2517-6161.1974.tb00999.x},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.2517-6161.1974.tb00999.x},
+	note = {{\_}eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.2517-6161.1974.tb00999.x},
+	langid = {en}
+}

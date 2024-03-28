@@ -1,8 +1,8 @@
 ---
 title: "sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling"
-date: "2022-11-09"
+date: "2024-03-28"
 abstract: >
-  Fitting areal models which use a spatial weights matrix to represent relationships between geographical units can be a cumbersome task, particularly when these units are not well-behaved. The two chief aims of `sfislands` are to simplify the process of creating an appropriate neighbourhood matrix, and to quickly visualise the predictions of subsequent models. The package uses visual aids in the form of easily-generated maps to help this process. This paper demonstrates how `sfislands` could be useful to researchers. It begins by describing the package's functions in the context of a proposed workflow. It then presents three worked examples showing a selection of potential use-cases. These range from earthquakes in Indonesia, to river crossings in London, and hierarchical models of output areas in Liverpool. We aim to show how the `sfislands` package streamlines much of the human workflow involved in creating and examining such models. 
+  Fitting areal models which use a spatial weights matrix to represent relationships between geographical units can be a cumbersome task, particularly when these units are not well-behaved. The two chief aims of \CRANpkg{sfislands} are to simplify the process of creating an appropriate neighbourhood matrix, and to quickly visualise the predictions of subsequent models. The package uses visual aids in the form of easily-generated maps to help this process. This paper demonstrates how \CRANpkg{sfislands} could be useful to researchers. It begins by describing the package's functions in the context of a proposed workflow. It then presents three worked examples showing a selection of potential use-cases. These range from earthquakes in Indonesia, to river crossings in London, and hierarchical models of output areas in Liverpool. We aim to show how the \CRANpkg{sfislands} package streamlines much of the human workflow involved in creating and examining such models. 
 draft: true
 author:  
   - name: Kevin Horan
@@ -42,7 +42,7 @@ bibliography: RJreferences.bib
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.align = "center")
 
 # install.packages("devtools")
-devtools::install_github("horankev/sfislands")
+# devtools::install_github("horankev/sfislands")
 
 # required libraries
 library(tidyverse)
@@ -120,7 +120,7 @@ units will be more similar than non-neighbouring ones [@tobler]. If this
 is not accounted for, the assumptions of many types of models will be
 violated. The relationships between all spatial units in a study can be
 represented numerically in a spatial weights matrix. In order to build
-this, we must first decide on what constitutes being a neighbour. We can
+this, we must first decide on what constitutes being a neighbour. We might
 see this as a continuous relationship where degree of neighbourliness is
 a function of connectivity, which could be represented as some measure
 of distance. Alternatively it could be a binary situation where each
@@ -130,8 +130,7 @@ constraint. It is the job of the modeller to formulate a hypothesis
 which justifies their choice of neighbourhood structure.
 
 For R users, the \CRANpkg{spdep} package [@spdep] has long been popular for the
-creation of these matrices. More recently, with the increasing use of \CRANpkg{sf}  [@sf]
-structures and their compatibility with the \CRANpkg{tidyverse}  [@tidyverse], the \CRANpkg{sfdep} package [@sfdep] has presented the same
+creation of these matrices. More recently, with the increasing use of \CRANpkg{sf} structures  [@sf] and their compatibility with the \CRANpkg{tidyverse}  [@tidyverse], the \CRANpkg{sfdep} package [@sfdep] has presented the same
 functionality in addition to extra features in a tidy structure based on
 lists in a similar way to \CRANpkg{sf}.
 
@@ -145,9 +144,9 @@ units are described, areas on either sides of rivers may be
 inappropriately classified as neighbours or not neighbours. Furthermore,
 the presence of infrastructure such as tunnels, bridges or ferry
 services might be satisfactory to meet our hypothesis of the required
-degree of connectivity to be considered neighbours. Again, such information will may not be apparent from a basic set of polygons. In order to create what a researcher considers to be an appropriate neighbourhood structure, incorporating all of the domain knowledge that they might have about the system, it should be simple and intuitive to add and remove connections between spatial units. This might mean adding links to account for man-made infrastructure, or cutting links to incorporate natural barriers such as rivers or mountains.
+degree of connectivity to be considered neighbours. Again, such information may not be apparent from a basic set of polygons. In order to create what a researcher considers to be an appropriate neighbourhood structure, incorporating all of the domain knowledge that they might have about the system, it should be simple and intuitive to add and remove connections between spatial units. This might mean adding links to account for man-made infrastructure, or cutting links to incorporate natural barriers such as rivers or mountains.
 
-The aim of `sfislands` is to deal with the situations described above in a
+The aim of \CRANpkg{sfislands}  [@sfislands] is to deal with the situations described above in a
 convenient and open manner. It allows us to set up a structure, quickly
 map it, and then examine whether or not we are happy with how it represents our hypothesis of relationships between units. The structure can then be edited and the process re-iterated until we have described a
 spatial relationship structure with which we are satisfied.
@@ -159,33 +158,33 @@ are for use after the creation of a model. Having fit a model with \CRANpkg{mgcv
 ## Typical use-cases
 
 In this paper, we will look at three examples to show different use-cases for
-`sfislands`. The first example focuses on earthquakes in
+\CRANpkg{sfislands}. The first example focuses on earthquakes in
 Indonesia. It shows a scenario where all of the functions are used, from
 setting up contiguities, to modelling and examining the predictions of the
 model.
 
-The second example looks at London and how, despite the lack of islands,
+The second example looks at London and how, despite an absence of islands,
 the presence of a river means that some of the pre-functions of
-`sfislands` can be useful.
+\CRANpkg{sfislands} can be useful.
 
 The final example focuses on Liverpool. There are no islands or issues
-of discontiguity in this dataset. Instead, this example shows how the package can be used to quickly fit a set of reasonably complex multilevel models, with or without a spatially autocorrelated component at the lowest level, and how the results can be presented in tidy format and quickly visualised. This example also gives an opportunity to show how, when different types of contiguity from, say, the \CRANpkg{spdep} package are used in an otherwise equivalent model, the `sfislands` post-functions make it very straightforward to quickly compare the different predictions generated from different structures.
+of discontiguity in this dataset. Instead, this example shows how the package can be used to quickly fit a set of reasonably complex multilevel models, with or without a spatially autocorrelated component at the lowest level, and how the results can be presented in tidy format and quickly visualised. This example also gives an opportunity to show how, when different types of contiguity from, say, the \CRANpkg{spdep} package are used in an otherwise equivalent model, the \CRANpkg{sfislands} post-functions make it very straightforward to quickly compare the different predictions generated from different structures.
 
-# Why use `sfislands`?
+# Why use \CRANpkg{sfislands}?
 
 Below, we outline some of the benefits of the package in the context of a proposed workflow for fitting areal spatial models.
 
 ### Step 1: *Pre-functions* for setting up neighbourhood structure
 
-  1. It addresses an issue commonly seen in online help forums where an inexperienced user wishes to get started with a model but fails at the first hurdle because their neighbourhood structure is not compatible with their data. `sfislands` will include a contiguity for all units.
+  1. It addresses an issue commonly seen in online help forums where an inexperienced user wishes to get started with a model but fails at the first hurdle because their neighbourhood structure contains empty records. \CRANpkg{sfislands} will include a contiguity for all units.
 
   2. It gives tools to immediately visualise this structure as a map.
 
-  3. These maps are created using \CRANpkg{ggplot2}  [@ggplot2], which allows users to apply the desired styling and themes using \CRANpkg{ggplot2} syntax.
+  3. These maps are created using \CRANpkg{ggplot2}  [@ggplot2], which allows users to apply additional styling and themes using \CRANpkg{ggplot2} syntax.
 
   4. As the nodes can be labelled by index, it makes it very easy to add and remove connections as appropriate with confidence.
 
-  5. Connections which have been induced by a function from the package but are not contiguities can be accessed to ensure openness in the process.
+  5. Connections which have been induced by a function from the package but which are not based on geographical contiguity can be accessed to ensure openness in the process.
   
 ### Step 2: Modelling
 
@@ -319,7 +318,7 @@ st_bridges(rectangles,
 ```
 
 These structures can serve as the input to models in \CRANpkg{brms},
-\pkg{r-inla}, \pkg{rstan}  [@rstan] or \CRANpkg{mgcv}. \CRANpkg{brms} requires a matrix structure while \CRANpkg{mgcv} models use a list. Rather than having a separate neighbours
+\pkg{r-inla}, \CRANpkg{rstan}  [@rstan] or \CRANpkg{mgcv}. \CRANpkg{brms} requires a matrix structure while \CRANpkg{mgcv} models use a list. Rather than having a separate neighbours
 object, it is included in the original \CRANpkg{sf} dataframe as a named list or matrix, in the spirit of the \CRANpkg{sfdep} package.
 
 ## st_quickmap_nb()
@@ -396,9 +395,9 @@ st_bridges(rectangles, "name",
   st_quickmap_nb(nodes = "numeric")
 ```
 
-Having decided upon an appropriate neighbourhood structure, the next step is to use this in the context of a model. The use of such structures is particularly associated with CAR-type (conditional autoregressive) models.
+Having decided upon an appropriate neighbourhood structure, the next step is to use this in the context of a model. The use of such structures is particularly associated with CAR (conditional autoregressive) or ICAR-type (intrinsic conditional autoregressive) models [@besag].
 These are often implemented in a Bayesian framework using
-\CRANpkg{brms}, \pkg{r-inla} or \pkg{rstan}. For example, the \CRANpkg{brms} ICAR structure requires the neighbourhood relationships to be in matrix form. The pre-functions will output the
+\CRANpkg{brms}, \pkg{r-inla} or \CRANpkg{rstan}. For example, the \CRANpkg{brms} ICAR structure requires the neighbourhood relationships to be in matrix form. The pre-functions will output the
 neighbourhood structure in the desired format for use in any of these
 frameworks. A convenient frequentist alternative is to use the
 \CRANpkg{mgcv} package which requires a named list of neighbours. It has the functionality to create such models
@@ -406,7 +405,7 @@ using `bs="mrf"`. It also has the ability to combine these with a
 hierarchical structure using `bs="re"`. While the outputs from the
 Bayesian structures mentioned above can be extracted in the same way as
 any other component of the model, it can be somewhat awkward to get the
-estimates from \CRANpkg{mgcv} model. `sfislands` has two post-functions to conveniently extract and visualise these.
+estimates from \CRANpkg{mgcv} models. \CRANpkg{sfislands} has two post-functions to conveniently extract and visualise these.
 
 # Post-functions
 
@@ -436,12 +435,12 @@ knitr::kable(postfunc, format = "latex", caption = "Post-functions: tidy estimat
 
 This function augments the original dataframe with the estimated means
 and standard errors of the spatially varying predictions from a fitted \CRANpkg{mgcv} model in a similar manner to
-how the \CRANpkg{broom} package  [@broom] operates. The `geometry` column, as per convention, remains as the last column of the augmented dataframe, while the predictions are positioned immediately before it. ^[In a similar way, `st_augment()` can also be used to append the random effects from \CRANpkg{lme4}   [@lme4] and \CRANpkg{nlme}   [@nlme] models to an `sf` dataframe, which can then be easily mapped using `st_quickmap_preds()`. Compatability with models created using different packages can be introduced in the future.] The spatially varying predictions which `st_augment()` extracts from an \CRANpkg{mgcv} model are 
+how the \CRANpkg{broom} package  [@broom] operates. The `geometry` column, as per convention, remains as the last column of the augmented dataframe, while the predictions are positioned immediately before it. ^[In a similar way, `st_augment()` can also be used to append the random effects from \CRANpkg{lme4}   [@lme4] and \CRANpkg{nlme}   [@nlme] models to an \CRANpkg{sf} dataframe, which can then be easily mapped using `st_quickmap_preds()`. Compatability with models created using different packages can be introduced in the future.] The spatially varying predictions which `st_augment()` extracts from an \CRANpkg{mgcv} model are 
 
 *   random effects (which are called in \CRANpkg{mgcv} with `bs='re'`), and 
 *   ICAR components (`bs='mrf'`). 
 
-Consider the model structure described in the code below using \CRANpkg{mgcv} syntax. In this model $y$ is the dependent variable while it is being estimated with a fixed intercept, a fixed slope for some covariate, a set of random intercepts and slopes for the covariate at a *region* level, and a set of ICAR varying intercepts and slopes at a lower *sub-region* level.
+Consider the model structure described in the code below using \CRANpkg{mgcv} syntax. In this model $y$ is the dependent variable which is being estimated with a fixed intercept, a fixed slope for some covariate, a set of random intercepts and slopes for the covariate at a *region* level, and a set of ICAR varying intercepts and slopes at a lower *sub-region* level.
 
 ```{r, eval=FALSE, echo=TRUE}
 # creating an mgcv model
@@ -499,7 +498,7 @@ knitr::kable(st_aug_tab_latex, format = "latex", caption = "The naming procedure
 
 These estimates can then be quickly mapped. As it is possible to include more than 1 spatially varying component, the output of this function is a list of plots. They can be viewed individually by indexing, or all at once using, for example, the `plotlist` argument from the `ggarrange()` function which is part of the \CRANpkg{ggpubr}  [@ggpubr] package. We will see this function in practice in the following examples. The maps which it generates are automatically titled and subtitled according to the type of effect. For example, the map showing predictions for `random.effect.region` will have "*region*" as its title and "*random.effect*" as its subtitle.
 
-# Example 1: Indonesia
+# Indonesia (example 1)
 
 Modelling earthquakes in Indonesia serves as a good example to
 demonstrate this package. Firstly, Indonesia is composed of many
@@ -570,12 +569,12 @@ The occurrences of these earthquakes are shown in Figure \@ref(fig:quake-occur),
 ```{r, quake-occur, fig.width=12, fig.height=6, out.width="100%", fig.cap = "Earthquakes in Indonesia of magnitude > 5.5, 1985-2023. Categorised by magnitude as medium, large or extra-large. "}
 
 quakes_df_temp <- quakes_df |> 
-  mutate(magfact = case_when(magfact == "M" ~ "M: 5.5 - 6.1",
-                             magfact == "L" ~ "L: 6.1 - 7",
+  mutate(magfact = case_when(magfact == "M" ~ "M: 5.5 - 6",
+                             magfact == "L" ~ "L: 6.1 - 6.9",
                              magfact == "XL" ~ "XL: 7+")) |> 
   mutate(magfact = factor(magfact,
-                          levels = c("M: 5.5 - 6.1",
-                                     "L: 6.1 - 7",
+                          levels = c("M: 5.5 - 6",
+                                     "L: 6.1 - 6.9",
                                      "XL: 7+")))
 ggplot() + 
   geom_sf(data=nearby_countries_df, fill="gray50", linewidth=0.5, colour="black") +
@@ -664,7 +663,7 @@ relative to other provinces.
 
 We can describe these relationships by setting up a neighbourhood
 structure based on queen contiguity where a pair of provinces are
-considered neighbours if they share at least one point of boundary. This can be modelled as a Markov random field to generate an intrinsic CAR (ICAR) model with a spatially varying term. Each of these terms will be correlated with the others according to the neighbourhood structure we have defined.
+considered neighbours if they share at least one point of boundary. This can be modelled as a Markov random field to generate an ICAR model with a spatially varying term. Each of these terms will be correlated with the others according to the neighbourhood structure we have defined.
 
 The Markov random field here follows a multivariate Gaussian
 distribution. $\gamma_i$ is a vector of province effects having a
@@ -702,7 +701,7 @@ useful to look at it in the following form:
 (\#eq:eq8)
 \end{equation}
 
-Having described the type of model we wish to implement, we now show how `sfislands` can be used to streamline the process.
+Having described the type of model we wish to implement, we now show how \CRANpkg{sfislands} can be used to streamline the process.
 
 ## Pre-functions
 
@@ -720,7 +719,7 @@ structure as usual, but with the additional stipulation that unconnected
 units (provinces which are islands or collections of islands) are
 considered neighbours to their *k* nearest provinces. For this example,
 we have set the value of k to 2. The resulting neighbourhood structure
-is shown in Figure \@ref(fig:`r ifelse(knitr::is_html_output(), 'ind-contig1html', 'ind-contig1')`).
+is shown in Figure \@ref(fig:`r ifelse(knitr::is_html_output(), 'ind-contig1html', 'ind-contig1')`). Note how is can be styled with a combination of internal arguments (size, colour, fill etc.) and additional \CRANpkg{ggplot2} layers.
 
 (ref:my-caption1) Neighbourhood structure for Indonesian provinces created by `st_bridges()` with `k=2`. 
 
@@ -926,7 +925,7 @@ We can see from the summary below that the adjusted R-squared is **0.983** and d
 summary(mod_pois_mrf)
 ```
 
-Regardless of this, having controlled for the concentration of faults, what is the additional risk level of earthquakes in a province? This can be seen as a measure of the activity level of faults locally and it is spatially smoothed by the autoregressive process. It is represented in the model summary by the component `s(province)`. However, the extraction of individual predictions for this component for each province from the `mgcv` model requires a number of steps. We now demonstrate how these are streamlined into a single function by the `sfislands` package.
+Returning to the initial question, what is the additional risk level of earthquakes in a province, having controlled for the concentration of faults? This can be seen as a measure of the activity level of faults locally and it is spatially smoothed by the autoregressive process. It is represented in the model summary by the component `s(province)`. However, the extraction of individual predictions for this component for each province from the `mgcv` model requires a number of steps. We now demonstrate how these are streamlined into a single function by the \CRANpkg{sfislands} package.
 
 ```{r, eval=FALSE}
 
@@ -943,7 +942,7 @@ AER::dispersiontest(mod_pois_mrf)
 ## Post-functions
 
 The function `st_augment()` allow us to add the spatially varying predictions from the model as new columns to the original dataframe in a process
-similar to that of the \CRANpkg{broom} package. For instance, we see from the code below that the original dataframe is now augmented with columns called "mrf.smooth.province" and "se.mrf.smooth.province" which show the predictions for the $\gamma_i$ component and their standard errors. Note that this is how we would expect them to be named, based on the previous discussion surrounding Table `r knitr::asis_output(ifelse(knitr::is_html_output(), '\\@ref(tab:staugtab-html)', '\\@ref(tab:staugtab-latex)'))`. They are positioned immediately before the final `geometry` column of the `sf` dataframe.
+similar to that of the \CRANpkg{broom} package. For instance, we see from the output of the following code chunk that the original dataframe is now augmented with columns called `mrf.smooth.province` and `se.mrf.smooth.province` which show the predictions for the $\gamma_i$ component and their standard errors. Note that this is how we would expect them to be named, based on the previous discussion surrounding Table `r knitr::asis_output(ifelse(knitr::is_html_output(), '\\@ref(tab:staugtab-html)', '\\@ref(tab:staugtab-latex)'))`. They are positioned immediately before the final `geometry` column of the `sf` dataframe, and after the neighbours list column, `nb`.
 
 ```{r, echo=TRUE}
 # column names of augmented dataframe
@@ -970,6 +969,7 @@ plot_mrf <- mod_pois_mrf |>
 
 # in this case, there is only one plot in the list
 # so we call it by index
+# it is then supplemented with additional ggplot functions
 
 plot_mrf[[1]] +
   coord_sf(datum=NA) +
@@ -1018,17 +1018,9 @@ plot_mrf[[1]] +
 ```
 
 If we wish to apply the inverse link function (the exponential function in the case of this Poisson model) to map these values to a more interpretable scale, this will not be generated by the function `st_quickmap_preds()`. Instead, we must use the augmented dataframe which is produced by `st_augment()` and create the appropriate extra column with the usual \CRANpkg{tidyverse} `mutate()` function. This allows us to produce the map in Figure
-\@ref(fig:`r ifelse(knitr::is_html_output(), 'ind-mrf2html', 'ind-mrf2')`). As these coefficients are multiplicatively related
-to the earthquake incidence, values below 1 imply an earthquake
-incidence which is lower than expected.
+\@ref(fig:`r ifelse(knitr::is_html_output(), 'ind-mrf2html', 'ind-mrf2')`). As these coefficients are multiplicatively related to the earthquake incidence, values below 1 imply an earthquake incidence which is lower than expected.
 
-The provinces with the 3 most elevated incidences are labelled in red
-We can see that, controlling for the effects of proximity to
-faults, the province of Nusa Tenggara Barat has 8.7 times the expected
-incidence, or number of major earthquakes per square kilometre. The two
-lowest-scoring provinces, labelled in green, have essentially no incidence of
-earthquake epicentres within their boundaries, controlling for what their proximity to faults alone would
-suggest.
+The provinces with the 3 most elevated incidences are labelled in red. We can see that, controlling for the effects of proximity to faults, the province of Nusa Tenggara Barat has 8.7 times the expected incidence, or number of major earthquakes per square kilometre. The two lowest-scoring provinces, labelled in green, have essentially no incidence of earthquake epicentres within their boundaries, controlling for what their proximity to faults alone would suggest.
 
 (ref:my-caption5) Map showing estimates of $\text{exp}(\gamma_i).$ This is produced by adding an additional column to the dataframe produced by `st_augment()`.
 
@@ -1124,7 +1116,7 @@ ggplot() +
 
 ## Workflow summary
 
-In this example, we have gone through a number of stages carefully, making changes to contiguities that we deemed appropriate as we went. However, in practice, at least in a first iteration, it might not be necessary to go through all of these steps. A rough and ready model, complete with spatially varying coefficients and visual output, can be generated with `sfislands` using nothing more than three or four lines of code, such as the following:
+In this example, we have gone through a number of stages carefully, making changes to contiguities that we deemed appropriate as we went. However, in practice, at least in a first iteration, it might not be necessary to go through all of these steps. A rough and ready model, complete with spatially varying coefficients and visual output, can be generated with \CRANpkg{sfislands} using nothing more than three or four lines of code, such as the following:
 
 ```{r, eval=FALSE, echo=TRUE}
 # workflow:
@@ -1150,9 +1142,10 @@ tidy_ests <- st_augment(mod, prep_data)
 st_quickmap_preds(tidy_ests)
 ```
 
-# Example 2: London
+# London (example 2)
 
-The next example looks only at using the *pre-functions* of `sfislands`, but in a situation where the presence of actual *islands* is not the problem we seek to deal with. Consider the wards and boroughs of London (sourced from the Greater London Authority's [London Datastore](https://data.london.gov.uk/)). In Figure \@ref(fig:lon-contig1) the `st_bridges()`
+The next example looks only at using the *pre-functions* of \CRANpkg{sfislands}, but in a situation where the presence of actual *islands* is not the problem we seek to deal with. Consider the wards and boroughs of London (sourced from the Greater London Authority's [London Datastore](https://data.london.gov.uk/)) and available at
+<https://github.com/horankev/london_liverpool_data>. In Figure \@ref(fig:lon-contig1) the `st_bridges()`
 function is applied to them to construct a queen contiguity
 neighbourhood structure. Because there are no disjoint units (or
 "islands"), this will be the same as using `st_contiguity()` from
@@ -1172,11 +1165,11 @@ st_bridges(london, "NAME") |>
 ```
 
 When a study area has a river running through it, problems can arise with constructing appropriate neighbourhood structures. Depending on how the
-geometries are defined, the presence of a river can cause problems in two ways. In one situation, the river could be expressed as a polygon in its own right meaning that it severs any potential contiguity between units on either side of its banks. In this situation, no spatial units will be neighbours with the units directly across the river from them. At the other extreme, if the river is not included as a geometry (as is the case here) all units on opposing banks are considered neighbours.
+geometries are defined, the presence of a river can cause problems in two ways. In one situation, the river could be expressed as a polygon in its own right meaning that, using the condition of queen contiguity, it severs any potential contiguity between units on either side of its banks. In this situation, no spatial units will be neighbours with the units directly across the river from them. At the other extreme, if the river is not included as a geometry (as is the case here) all units on opposing banks are automatically considered neighbours.
 
-Depending on the presence of river crossings, two areas which are physically quite close but on opposing banks might be very distinct. If there is no means of crossing the river within a reasonable distance, somebody living on the banks of a river might be more likely to go about their life primarily on their side of the river, despite the short distance as the crow flies of facilities on the other side. This could be relevant in terms of, say, modelling of house prices where we might want to incorporate these issues into a neighbourhood structure.
+Depending on the presence of river crossings, two areas which are physically quite close but on opposing banks might be very distinct. If there is no means of crossing the river within a reasonable distance, somebody living on the banks of a river might be more likely to go about their life primarily on their side of the river, despite the short distance as the crow flies of facilities on the other side. This could be relevant in terms of, say, modelling of house prices where we might want to incorporate issues such as local amenities into a neighbourhood structure.
 
-`sfislands` provides convenient functions for this sort of situation. Let us start by restricting our wards and boroughs of interest to just those which are on either side of the river Thames (Figure \@ref(fig:lon-contig2)).
+\CRANpkg{sfislands} provides convenient functions for this sort of situation. Let us start by restricting our wards and boroughs of interest to just those which are on either side of the river Thames. Figure \@ref(fig:lon-contig2) shows the resultant contiguities when the river is ignored.
 
 ```{r, lon-contig2, fig.width=12, fig.height=6, echo=TRUE, out.width="100%", fig.cap = "Riverside boroughs of Greater London. Queen contiguity disregarding river. "}
 # which boroughs are alongside the river
@@ -1256,9 +1249,9 @@ st_bridges(london[riverside,],"NAME") |>
 This allows us to easily cut the ties across the river for these units
 manually by using the function `st_manual_cut_nb()`. ^[While we are using the index of the units in this example, the function also
 accepts names as arguments which may be more convenient in some circumstances.] Having made these adjustments,
-`st_quickmap_nb()` now shows a connectivity structure (Figure \@ref(fig:lon-contig4)) which reflects how we have hypothesised that influence should extend across the river in the presence or absence of crossings.
+`st_quickmap_nb()` now shows a connectivity structure (Figure \@ref(fig:lon-contig4)) which reflects our hypothesis of how influence should extend across the river in the presence or absence of crossings.
 
-This example shows that the pre-functions of `sfislands` have uses for situations which do not involve islands. They can be used to apply domain knowledge to easily design the most appropriate neighbourhood structure.
+This example shows that the pre-functions of \CRANpkg{sfislands} have uses for situations which do not involve islands. They can be used to apply domain knowledge to easily design the most appropriate neighbourhood structure.
 
 ```{r, lon-contig4, fig.width=12, fig.height=6, echo=TRUE, out.width="100%", fig.cap = "Riverside boroughs of Greater London. Contiguities across the river have been cut for the pink boroughs. "}
 # manually cut the links where there is no crossing
@@ -1286,11 +1279,11 @@ st_bridges(london[riverside,], "NAME") |>
                                         linewidth = 1.5))
 ```
 
-# Example 3: Liverpool
+# Liverpool (example 3)
 
-In this final example, there are no islands and no river issues. We saw in the Indonesia example how `sfislands` can extract estimates from the `mgcv` argument `bs="mrf"`. It can also deal with random effects as defined by `bs="re"` in `mgcv` models. This means it is possible to create quite complex models featuring both a traditional multi-level structure and conditionally related components. Here, we will construct a hierarchical model in this way which also features an ICAR component at the lowest level of the tree. We will compare two different types of contiguity which could be applied to the ICAR component:
+In this final example, there are no islands and no river issues. We saw in the Indonesia example how \CRANpkg{sfislands} can extract estimates from the `mgcv` argument `bs="mrf"`. It can also deal with random effects as defined by `bs="re"` in `mgcv` models. This means it is possible to create quite complex models featuring both a traditional multi-level structure and conditionally correlated components. Here, we will construct a hierarchical model in this way which also features an ICAR component at the lowest level of the tree. We will compare two different types of contiguity which could be applied to the ICAR component:
 
-* `st_bridges()` from `sfislands`, which implements first-order queen contiguity in the same way as `sfdep:st_contiguity()` for situations such as this where there are no islands, and 
+* `st_bridges()` from \CRANpkg{sfislands}, which implements first-order queen contiguity in the same way as `sfdep:st_contiguity()` for situations such as this where there are no islands, and 
 * `st_dist_band()` from \CRANpkg{sfdep}, which connects units whose centroids lie within a chosen distance threshold.
 
 We will show how their outcomes can be quickly mapped to give an immediate sense of the differences implied by each model's structure.
@@ -1335,7 +1328,7 @@ u_{jk} \sim N(0,\sigma_{u}^2)
 \end{equation}
 where the $\gamma_{ijk}$s comprise a vector of ICAR components for each OA, similar in form to the ICAR component for the provinces in the earlier Indonesia model. The vector has a multivariate normal distribution with mean 0 and precision related to the contiguity structure as before.
 
-There are no islands or discontiguities in this geometry of Liverpool so using `st_bridges()` will give the same structure as would `sfdep::st_contiguity()` (see Figure \@ref(fig:liv-contigs)).
+There are no islands or discontiguities in this geometry of Liverpool so using `st_bridges()` will give the same structure as would `sfdep::st_contiguity()` (see Figure \@ref(fig:liv-contigs), with a magnified section for visibility purposes, created using \pkg{ggmagnify}  [@ggmagnify]).
 
 ```{r}
 livadmin <- tribble(
@@ -1467,11 +1460,11 @@ st_bridges(liverpool, "oa_cd") |>
 
 ```
 
-To demonstrate how `sfislands` can be used to quickly compare the output of models, we show the output of three similar models. The first of these is a hierarchical model as described above, but with no ICAR component at the lowest level. Its spatially varying coefficients are shown in Figure \@ref(fig:liv-est1). Secondly, we fit the model described above using `st_bridges()` to generate first-order queen contiguities as the structure for the neighbourhood relationships. The coefficients of this model are shown in Figure \@ref(fig:`r ifelse(knitr::is_html_output(), 'liv-est2html', 'liv-est2')`).
+To demonstrate how \CRANpkg{sfislands} can be used to quickly compare the output of models, we show the output of three similar models. The first of these is a hierarchical model as described above, but with no ICAR component at the lowest level. Its spatially varying coefficients are shown in Figure \@ref(fig:liv-est1). Secondly, we fit the model described above using `st_bridges()` to generate first-order queen contiguities as the structure for the neighbourhood relationships. The coefficients of this model are shown in Figure \@ref(fig:`r ifelse(knitr::is_html_output(), 'liv-est2html', 'liv-est2')`).
 
 Finally, we can fit a similar model but this time using a within-distance criterion of 700m for neighbourhood status. All units within this distance of each other are considered neighbours. This was generated with the `sfdep:st_dist_band()` function. These coefficients are shown in Figure \@ref(fig:`r ifelse(knitr::is_html_output(), 'liv-est3html', 'liv-est3')`).
 
-This shows how `sfislands` can quickly give an intuitive representation of how a set of similar models are operating. As a measure of the relative strengths of these three structures, we could compare their AICs (see Table `r knitr::asis_output(ifelse(knitr::is_html_output(), '\\@ref(tab:aic-html)', '\\@ref(tab:aic-latex)'))`). These suggest that, in this scenario, inclusion of the ICAR component is appropriate, and queen contiguity is a more suitable choice than the distance-band condition for defining the neighbourhood structure.
+This shows how \CRANpkg{sfislands} can quickly give an intuitive representation of how a set of similar models are operating. As a measure of the relative strengths of these three structures, we could compare their AICs (see Table `r knitr::asis_output(ifelse(knitr::is_html_output(), '\\@ref(tab:aic-html)', '\\@ref(tab:aic-latex)'))`). These suggest that, in this scenario, inclusion of the ICAR component is appropriate, and queen contiguity is a more suitable choice than the distance-band condition for defining the neighbourhood structure.
 
 ```{r}
 
@@ -1692,9 +1685,9 @@ ggarrange(
 aic_tab <- AIC(liverpool_hmodel, liverpool_hsamodel, liverpool_hsamodel_dist_band) |> 
   data.frame() |> 
   mutate(`relative AIC` = round(-AIC / min(AIC),3),
-         model = c("hierachical model, no ICAR",
-                   "hierachical model, ICAR based on st_bridges()",
-                   "hierachical model, ICAR based on sfdep::st_dist_band()")) |> 
+         model = c("hierarchical model, no ICAR",
+                   "hierarchical model, ICAR based on st_bridges()",
+                   "hierarchical model, ICAR based on sfdep::st_dist_band()")) |> 
   rownames_to_column(var="modcode") |> 
   arrange(AIC) |> 
   select(model, AIC, `relative AIC`)
@@ -1714,7 +1707,7 @@ knitr::kable(aic_tab, format = "latex", caption = "Comparison of models by AIC."
 
 # Summary
 
-These examples have shown the varying scenarios in which `sfislands` can be useful. It aims to contribute to spatial modelling by making an awkward area less awkward. Rather than having a default attitude of ignoring islands when building neighbourhood structures based on contiguity, it hopes to encourage at least an examination of whether or not it is appropriate for them to be included. It also provides helper functions to use these structures in spatial regression models built with \CRANpkg{mgcv} which streamline the human effort necessary to examine the estimates. In future, compatibility with other modelling packages can be added to broaden the package's capabilities.
+These examples have shown the varying scenarios in which \CRANpkg{sfislands} can be useful. It aims to contribute to spatial modelling by making an awkward area less awkward. Rather than having a default attitude of ignoring islands when building neighbourhood structures based on contiguity, it hopes to encourage at least an examination of whether or not it is appropriate for them to be included. Even when no islands are present, it provides a simple procedure for tailoring a neighbourhood structure to match a given hypothesis. It also provides helper functions to use these structures in spatial regression models, notably those built with \CRANpkg{mgcv}, which streamline the human effort necessary to examine the estimates. In future, compatibility with other modelling packages can be added to broaden the package's capabilities.
 
 # Acknowledgements
 

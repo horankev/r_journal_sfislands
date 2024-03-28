@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.2)  21 MAR 2024 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.2)  28 MAR 2024 20:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -724,39 +724,26 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-(./article.tex
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 11.
-(/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.18004pt on input line 11.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-[1{/Users/kevinhoran/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
+(./article.tex [1{/Users/kevinhoran/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
-{/Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
-LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 12.24005pt on input line 75.
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 127.
+]
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 126.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 127.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 126.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 127.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 126.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 127.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 126.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 127.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 126.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -765,219 +752,230 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 127.
+(Font)              scaled to size 9.37807pt on input line 126.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 127.
+(Font)              scaled to size 7.29405pt on input line 126.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 127.
+(Font)              scaled to size 5.21004pt on input line 126.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 127.
+(Font)              scaled to size 9.37807pt on input line 126.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 127.
+(Font)              scaled to size 7.29405pt on input line 126.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 127.
-<article_files/figure-latex/rects1-1.pdf, id=133, 200.75pt x 134.5025pt>
+(Font)              scaled to size 5.21004pt on input line 126.
+<article_files/figure-latex/rects1-1.pdf, id=141, 200.75pt x 134.5025pt>
 File: article_files/figure-latex/rects1-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/rects1-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/rects1-1.pdf  used on input line 148.
+Package pdftex.def Info: article_files/figure-latex/rects1-1.pdf  used on input line 147.
 (pdftex.def)             Requested size: 200.7495pt x 134.50215pt.
-[2] [3 <./article_files/figure-latex/rects1-1.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 272.
+[2]
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 159.
+(/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 9.18004pt on input line 159.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+[3{/Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc} <./article_files/figure-latex/rects1-1.pdf>] [4]
+LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 271.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 9.18004pt on input line 272.
+(Font)              scaled to size 9.18004pt on input line 271.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[4]
-<article_files/figure-latex/rects2-1.pdf, id=185, 100.375pt x 66.2475pt>
+<article_files/figure-latex/rects2-1.pdf, id=193, 100.375pt x 66.2475pt>
 File: article_files/figure-latex/rects2-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/rects2-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/rects2-1.pdf  used on input line 276.
+Package pdftex.def Info: article_files/figure-latex/rects2-1.pdf  used on input line 275.
 (pdftex.def)             Requested size: 100.37474pt x 66.24733pt.
-<article_files/figure-latex/rects3-1.pdf, id=187, 100.375pt x 66.2475pt>
+<article_files/figure-latex/rects3-1.pdf, id=195, 100.375pt x 66.2475pt>
 File: article_files/figure-latex/rects3-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/rects3-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/rects3-1.pdf  used on input line 297.
-(pdftex.def)             Requested size: 100.37474pt x 66.24733pt.
-<article_files/figure-latex/rects4-1.pdf, id=189, 100.375pt x 66.2475pt>
-File: article_files/figure-latex/rects4-1.pdf Graphic file (type pdf)
-<use article_files/figure-latex/rects4-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/rects4-1.pdf  used on input line 342.
+Package pdftex.def Info: article_files/figure-latex/rects3-1.pdf  used on input line 296.
 (pdftex.def)             Requested size: 100.37474pt x 66.24733pt.
 [5{/Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc} <./article_files/figure-latex/rects2-1.pdf> <./article_files/figure-latex/rects3-1.pdf>]
-<article_files/figure-latex/rects5-1.pdf, id=212, 100.375pt x 66.2475pt>
+<article_files/figure-latex/rects4-1.pdf, id=219, 100.375pt x 66.2475pt>
+File: article_files/figure-latex/rects4-1.pdf Graphic file (type pdf)
+<use article_files/figure-latex/rects4-1.pdf>
+Package pdftex.def Info: article_files/figure-latex/rects4-1.pdf  used on input line 341.
+(pdftex.def)             Requested size: 100.37474pt x 66.24733pt.
+<article_files/figure-latex/rects5-1.pdf, id=221, 100.375pt x 66.2475pt>
 File: article_files/figure-latex/rects5-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/rects5-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/rects5-1.pdf  used on input line 368.
+Package pdftex.def Info: article_files/figure-latex/rects5-1.pdf  used on input line 367.
 (pdftex.def)             Requested size: 100.37474pt x 66.24733pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 413.
+(Font)              scaled to size 8.33606pt on input line 412.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 413.
+(Font)              scaled to size 6.25204pt on input line 412.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 413.
+(Font)              scaled to size 8.33606pt on input line 412.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 413.
+(Font)              scaled to size 6.25204pt on input line 412.
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.16003pt on input line 413.
+(Font)              scaled to size 8.16003pt on input line 412.
 [6 <./article_files/figure-latex/rects4-1.pdf> <./article_files/figure-latex/rects5-1.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 418.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 417.
 (/Users/kevinhoran/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-Overfull \hbox (5.3168pt too wide) in paragraph at lines 451--464
+Overfull \hbox (5.3168pt too wide) in paragraph at lines 450--463
  [][] 
  []
 
 [7]
-<article_files/figure-latex/fault-buffers-1.pdf, id=265, 857.2025pt x 373.395pt>
+<article_files/figure-latex/fault-buffers-1.pdf, id=278, 857.2025pt x 373.395pt>
 File: article_files/figure-latex/fault-buffers-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/fault-buffers-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/fault-buffers-1.pdf  used on input line 495.
+Package pdftex.def Info: article_files/figure-latex/fault-buffers-1.pdf  used on input line 494.
 (pdftex.def)             Requested size: 398.33858pt x 173.51292pt.
-<article_files/figure-latex/fault-conc-1.pdf, id=267, 857.2025pt x 371.3875pt>
+<article_files/figure-latex/fault-conc-1.pdf, id=280, 857.2025pt x 371.3875pt>
 File: article_files/figure-latex/fault-conc-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/fault-conc-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/fault-conc-1.pdf  used on input line 511.
+Package pdftex.def Info: article_files/figure-latex/fault-conc-1.pdf  used on input line 510.
 (pdftex.def)             Requested size: 398.33858pt x 172.58005pt.
-<article_files/figure-latex/quake-occur-1.pdf, id=271, 857.2025pt x 335.2525pt>
+[8 <./article_files/figure-latex/fault-buffers-1.pdf> <./article_files/figure-latex/fault-conc-1.pdf>]
+<article_files/figure-latex/quake-occur-1.pdf, id=307, 857.2025pt x 335.2525pt>
 File: article_files/figure-latex/quake-occur-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/quake-occur-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/quake-occur-1.pdf  used on input line 527.
+Package pdftex.def Info: article_files/figure-latex/quake-occur-1.pdf  used on input line 526.
 (pdftex.def)             Requested size: 398.33858pt x 155.78848pt.
-<article_files/figure-latex/quake-totals-1.pdf, id=272, 857.2025pt x 335.2525pt>
+<article_files/figure-latex/quake-totals-1.pdf, id=308, 857.2025pt x 335.2525pt>
 File: article_files/figure-latex/quake-totals-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/quake-totals-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/quake-totals-1.pdf  used on input line 536.
+Package pdftex.def Info: article_files/figure-latex/quake-totals-1.pdf  used on input line 535.
 (pdftex.def)             Requested size: 398.33858pt x 155.78848pt.
-<article_files/figure-latex/quake-conc-1.pdf, id=273, 857.2025pt x 335.2525pt>
+<article_files/figure-latex/quake-conc-1.pdf, id=309, 857.2025pt x 335.2525pt>
 File: article_files/figure-latex/quake-conc-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/quake-conc-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/quake-conc-1.pdf  used on input line 545.
+Package pdftex.def Info: article_files/figure-latex/quake-conc-1.pdf  used on input line 544.
 (pdftex.def)             Requested size: 398.33858pt x 155.78848pt.
-[8 <./article_files/figure-latex/fault-buffers-1.pdf> <./article_files/figure-latex/fault-conc-1.pdf>] [9 <./article_files/figure-latex/quake-occur-1.pdf> <./article_files/figure-latex/quake-totals-1.pdf> <./article_files/figure-latex/quake-conc-1.pdf>]
-Overfull \hbox (16.55038pt too wide) in paragraph at lines 566--570
+
+Overfull \hbox (16.55038pt too wide) in paragraph at lines 565--569
 \T1/ppl/m/n/9 (-20) Firstly, when ex-clud-ing the in-ci-dence and just mod-elling counts, where $\OML/zplm/m/it/9 y[] \OT1/zplm/m/n/9 = [][]$\T1/ppl/m/n/9 (-20) ,
  []
 
-[10]
-<article_files/figure-latex/ind-contig1-1.pdf, id=347, 869.2475pt x 341.275pt>
+[9 <./article_files/figure-latex/quake-occur-1.pdf> <./article_files/figure-latex/quake-totals-1.pdf>] [10 <./article_files/figure-latex/quake-conc-1.pdf>]
+<article_files/figure-latex/ind-contig1-1.pdf, id=361, 869.2475pt x 341.275pt>
 File: article_files/figure-latex/ind-contig1-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/ind-contig1-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/ind-contig1-1.pdf  used on input line 670.
+Package pdftex.def Info: article_files/figure-latex/ind-contig1-1.pdf  used on input line 669.
 (pdftex.def)             Requested size: 398.33858pt x 156.39474pt.
-<article_files/figure-latex/ind-contig2-1.pdf, id=350, 869.2475pt x 313.17pt>
+<article_files/figure-latex/ind-contig2-1.pdf, id=364, 869.2475pt x 313.17pt>
 File: article_files/figure-latex/ind-contig2-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/ind-contig2-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/ind-contig2-1.pdf  used on input line 696.
+Package pdftex.def Info: article_files/figure-latex/ind-contig2-1.pdf  used on input line 695.
 (pdftex.def)             Requested size: 398.33858pt x 143.51518pt.
 [11 <./article_files/figure-latex/ind-contig1-1.pdf>]
-<article_files/figure-latex/ind-contig3-1.pdf, id=363, 869.2475pt x 341.275pt>
+<article_files/figure-latex/ind-contig3-1.pdf, id=377, 869.2475pt x 341.275pt>
 File: article_files/figure-latex/ind-contig3-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/ind-contig3-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/ind-contig3-1.pdf  used on input line 761.
+Package pdftex.def Info: article_files/figure-latex/ind-contig3-1.pdf  used on input line 760.
 (pdftex.def)             Requested size: 398.33858pt x 156.39474pt.
 
-Underfull \hbox (badness 6125) in paragraph at lines 765--765
+Underfull \hbox (badness 6125) in paragraph at lines 764--764
 []\T1/ppl/b/n/9 (+20) Figure 13: |\T1/ppl/m/n/9 (+20) Neigh-bour-hood struc-ture for In-done-sian provinces, af-ter al-ter-ations us-ing
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 10.20004pt on input line 769.
+(Font)              scaled to size 10.20004pt on input line 768.
 [12 <./article_files/figure-latex/ind-contig2-1.pdf>] [13 <./article_files/figure-latex/ind-contig3-1.pdf>]
-<article_files/figure-latex/ind-mrf1-1.pdf, id=394, 857.2025pt x 367.3725pt>
+<article_files/figure-latex/ind-mrf1-1.pdf, id=411, 857.2025pt x 367.3725pt>
 File: article_files/figure-latex/ind-mrf1-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/ind-mrf1-1.pdf>
 Package pdftex.def Info: article_files/figure-latex/ind-mrf1-1.pdf  used on input line 873.
 (pdftex.def)             Requested size: 398.33858pt x 170.71432pt.
-[14]
-<article_files/figure-latex/ind-mrf2-1.pdf, id=403, 857.2025pt x 335.2525pt>
+<article_files/figure-latex/ind-mrf2-1.pdf, id=414, 857.2025pt x 335.2525pt>
 File: article_files/figure-latex/ind-mrf2-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/ind-mrf2-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/ind-mrf2-1.pdf  used on input line 897.
+Package pdftex.def Info: article_files/figure-latex/ind-mrf2-1.pdf  used on input line 889.
 (pdftex.def)             Requested size: 398.33858pt x 155.78848pt.
-[15 <./article_files/figure-latex/ind-mrf1-1.pdf> <./article_files/figure-latex/ind-mrf2-1.pdf>]
-<article_files/figure-latex/lon-contig1-1.pdf, id=432, 750.805pt x 578.16pt>
+[14] [15 <./article_files/figure-latex/ind-mrf1-1.pdf> <./article_files/figure-latex/ind-mrf2-1.pdf>]
+<article_files/figure-latex/lon-contig1-1.pdf, id=451, 750.805pt x 578.16pt>
 File: article_files/figure-latex/lon-contig1-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/lon-contig1-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/lon-contig1-1.pdf  used on input line 956.
+Package pdftex.def Info: article_files/figure-latex/lon-contig1-1.pdf  used on input line 949.
 (pdftex.def)             Requested size: 398.33858pt x 306.74976pt.
-<article_files/figure-latex/lon-contig2-1.pdf, id=434, 869.2475pt x 355.3275pt>
+[16]
+<article_files/figure-latex/lon-contig2-1.pdf, id=462, 869.2475pt x 355.3275pt>
 File: article_files/figure-latex/lon-contig2-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/lon-contig2-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/lon-contig2-1.pdf  used on input line 988.
+Package pdftex.def Info: article_files/figure-latex/lon-contig2-1.pdf  used on input line 981.
 (pdftex.def)             Requested size: 398.33858pt x 162.83453pt.
-[16] [17 <./article_files/figure-latex/lon-contig1-1.pdf> <./article_files/figure-latex/lon-contig2-1.pdf>]
-<article_files/figure-latex/lon-crossings-1.pdf, id=460, 857.2025pt x 417.56pt>
+<article_files/figure-latex/lon-crossings-1.pdf, id=464, 857.2025pt x 417.56pt>
 File: article_files/figure-latex/lon-crossings-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/lon-crossings-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/lon-crossings-1.pdf  used on input line 999.
+Package pdftex.def Info: article_files/figure-latex/lon-crossings-1.pdf  used on input line 992.
 (pdftex.def)             Requested size: 398.33858pt x 194.03595pt.
-<article_files/figure-latex/lon-contig3-1.pdf, id=462, 869.2475pt x 355.3275pt>
+[17 <./article_files/figure-latex/lon-contig1-1.pdf>] [18 <./article_files/figure-latex/lon-contig2-1.pdf> <./article_files/figure-latex/lon-crossings-1.pdf>]
+<article_files/figure-latex/lon-contig3-1.pdf, id=499, 869.2475pt x 355.3275pt>
 File: article_files/figure-latex/lon-contig3-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/lon-contig3-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/lon-contig3-1.pdf  used on input line 1030.
+Package pdftex.def Info: article_files/figure-latex/lon-contig3-1.pdf  used on input line 1023.
 (pdftex.def)             Requested size: 398.33858pt x 162.83453pt.
-[18 <./article_files/figure-latex/lon-crossings-1.pdf>]
-<article_files/figure-latex/lon-contig4-1.pdf, id=484, 869.2475pt x 355.3275pt>
+[19 <./article_files/figure-latex/lon-contig3-1.pdf>]
+<article_files/figure-latex/lon-contig4-1.pdf, id=522, 869.2475pt x 355.3275pt>
 File: article_files/figure-latex/lon-contig4-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/lon-contig4-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/lon-contig4-1.pdf  used on input line 1072.
+Package pdftex.def Info: article_files/figure-latex/lon-contig4-1.pdf  used on input line 1065.
 (pdftex.def)             Requested size: 398.33858pt x 162.83453pt.
-[19 <./article_files/figure-latex/lon-contig3-1.pdf> <./article_files/figure-latex/lon-contig4-1.pdf>]
-<article_files/figure-latex/liv-nested-1.pdf, id=518, 712.6625pt x 332.24126pt>
+[20 <./article_files/figure-latex/lon-contig4-1.pdf>]
+<article_files/figure-latex/liv-nested-1.pdf, id=556, 712.6625pt x 332.24126pt>
 File: article_files/figure-latex/liv-nested-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-nested-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-nested-1.pdf  used on input line 1156.
+Package pdftex.def Info: article_files/figure-latex/liv-nested-1.pdf  used on input line 1149.
 (pdftex.def)             Requested size: 398.33858pt x 185.70403pt.
-<article_files/figure-latex/liv-vars-1.pdf, id=519, 383.4325pt x 272.01625pt>
+<article_files/figure-latex/liv-vars-1.pdf, id=557, 383.4325pt x 272.01625pt>
 File: article_files/figure-latex/liv-vars-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-vars-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-vars-1.pdf  used on input line 1165.
+Package pdftex.def Info: article_files/figure-latex/liv-vars-1.pdf  used on input line 1158.
 (pdftex.def)             Requested size: 278.83578pt x 197.82309pt.
-[20] [21 <./article_files/figure-latex/liv-nested-1.pdf> <./article_files/figure-latex/liv-vars-1.pdf>]
-<article_files/figure-latex/liv-contigs-1.pdf, id=557, 266.9975pt x 361.35pt>
+<article_files/figure-latex/liv-contigs-1.pdf, id=558, 266.9975pt x 361.35pt>
 File: article_files/figure-latex/liv-contigs-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-contigs-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-contigs-1.pdf  used on input line 1193.
+Package pdftex.def Info: article_files/figure-latex/liv-contigs-1.pdf  used on input line 1186.
 (pdftex.def)             Requested size: 239.00557pt x 323.48068pt.
-<article_files/figure-latex/liv-est1-1.pdf, id=562, 841.1425pt x 206.7725pt>
+[21 <./article_files/figure-latex/liv-nested-1.pdf>] [22 <./article_files/figure-latex/liv-vars-1.pdf> <./article_files/figure-latex/liv-contigs-1.pdf>]
+<article_files/figure-latex/liv-est1-1.pdf, id=608, 841.1425pt x 206.7725pt>
 File: article_files/figure-latex/liv-est1-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-est1-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-est1-1.pdf  used on input line 1208.
+Package pdftex.def Info: article_files/figure-latex/liv-est1-1.pdf  used on input line 1201.
 (pdftex.def)             Requested size: 398.33858pt x 97.92137pt.
-<article_files/figure-latex/liv-est2-1.pdf, id=563, 843.15pt x 423.5825pt>
+<article_files/figure-latex/liv-est2-1.pdf, id=609, 843.15pt x 423.5825pt>
 File: article_files/figure-latex/liv-est2-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-est2-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-est2-1.pdf  used on input line 1219.
+Package pdftex.def Info: article_files/figure-latex/liv-est2-1.pdf  used on input line 1212.
 (pdftex.def)             Requested size: 398.33858pt x 200.11794pt.
-<article_files/figure-latex/liv-est3-1.pdf, id=564, 841.1425pt x 423.5825pt>
+<article_files/figure-latex/liv-est3-1.pdf, id=610, 841.1425pt x 423.5825pt>
 File: article_files/figure-latex/liv-est3-1.pdf Graphic file (type pdf)
 <use article_files/figure-latex/liv-est3-1.pdf>
-Package pdftex.def Info: article_files/figure-latex/liv-est3-1.pdf  used on input line 1230.
+Package pdftex.def Info: article_files/figure-latex/liv-est3-1.pdf  used on input line 1223.
 (pdftex.def)             Requested size: 398.33858pt x 200.59622pt.
-[22 <./article_files/figure-latex/liv-contigs-1.pdf> <./article_files/figure-latex/liv-est1-1.pdf>] [23 <./article_files/figure-latex/liv-est2-1.pdf> <./article_files/figure-latex/liv-est3-1.pdf>] [24]
-Overfull \hbox (6.81241pt too wide) in paragraph at lines 1328--1330
-\T1/zi4/m/n/9 en . wikipedia . org / w / index . php ? title = List % 20of % 20crossings % 20of % 20the % 20River % 20Thames &
+[23 <./article_files/figure-latex/liv-est1-1.pdf> <./article_files/figure-latex/liv-est2-1.pdf>] [24 <./article_files/figure-latex/liv-est3-1.pdf>]
+Overfull \hbox (34.35248pt too wide) in paragraph at lines 1330--1332
+\T1/zi4/m/n/9 en . wikipedia . org / w / index . php ? title = List / %20of / %20crossings / %20of / %20the / %20River / %20Thames &
  []
 
 No file RJwrapper.bbl.
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 1346.
+(Font)              using `T1/zi4/m/n' instead on input line 1348.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
-(Font)              scaled to size 9.18004pt on input line 1346.
+(Font)              scaled to size 9.18004pt on input line 1348.
 ) [25] (./RJwrapper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -987,16 +985,16 @@ L3 programming layer <2024-02-20>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
-(rerunfilecheck)             Checksum: 2C5D1766143DCE25E949C35601B98D22;3795.
+(rerunfilecheck)             Checksum: 6D47EBB16D36604441D239CBA41529FF;3783.
  ) 
 Here is how much of TeX's memory you used:
- 27305 strings out of 476062
- 503714 string characters out of 5791186
+ 27312 strings out of 476062
+ 503733 string characters out of 5791186
  1946187 words of memory out of 5000000
- 48387 multiletter control sequences out of 15000+600000
- 619216 words of font info for 357 fonts, out of 8000000 for 9000
+ 48385 multiletter control sequences out of 15000+600000
+ 619143 words of font info for 360 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,12n,131p,1006b,959s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,12n,131p,1006b,949s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
@@ -1007,10 +1005,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/kevinhoran/Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (25 pages, 8985854 bytes).
+Output written on RJwrapper.pdf (25 pages, 8987534 bytes).
 PDF statistics:
- 779 PDF objects out of 1000 (max. 8388607)
- 622 compressed objects within 7 object streams
- 158 named destinations out of 1000 (max. 500000)
- 87383 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 815 PDF objects out of 1000 (max. 8388607)
+ 658 compressed objects within 7 object streams
+ 161 named destinations out of 1000 (max. 500000)
+ 86871 words of extra memory for PDF output out of 89155 (max. 10000000)
 

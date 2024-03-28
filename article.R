@@ -5,7 +5,7 @@
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.align = "center")
 
 # install.packages("devtools")
-devtools::install_github("horankev/sfislands")
+# devtools::install_github("horankev/sfislands")
 
 # required libraries
 library(tidyverse)
@@ -330,12 +330,12 @@ ggplot() +
 ## ---- quake-occur, fig.width=12, fig.height=6, out.width="100%", fig.cap = "Earthquakes in Indonesia of magnitude > 5.5, 1985-2023. Categorised by magnitude as medium, large or extra-large. "----
 
 quakes_df_temp <- quakes_df |> 
-  mutate(magfact = case_when(magfact == "M" ~ "M: 5.5 - 6.1",
-                             magfact == "L" ~ "L: 6.1 - 7",
+  mutate(magfact = case_when(magfact == "M" ~ "M: 5.5 - 6",
+                             magfact == "L" ~ "L: 6.1 - 6.9",
                              magfact == "XL" ~ "XL: 7+")) |> 
   mutate(magfact = factor(magfact,
-                          levels = c("M: 5.5 - 6.1",
-                                     "L: 6.1 - 7",
+                          levels = c("M: 5.5 - 6",
+                                     "L: 6.1 - 6.9",
                                      "XL: 7+")))
 ggplot() + 
   geom_sf(data=nearby_countries_df, fill="gray50", linewidth=0.5, colour="black") +
@@ -593,6 +593,7 @@ plot_mrf <- mod_pois_mrf |>
 
 # in this case, there is only one plot in the list
 # so we call it by index
+# it is then supplemented with additional ggplot functions
 
 plot_mrf[[1]] +
   coord_sf(datum=NA) +
@@ -1202,9 +1203,9 @@ ggarrange(
 aic_tab <- AIC(liverpool_hmodel, liverpool_hsamodel, liverpool_hsamodel_dist_band) |> 
   data.frame() |> 
   mutate(`relative AIC` = round(-AIC / min(AIC),3),
-         model = c("hierachical model, no ICAR",
-                   "hierachical model, ICAR based on st_bridges()",
-                   "hierachical model, ICAR based on sfdep::st_dist_band()")) |> 
+         model = c("hierarchical model, no ICAR",
+                   "hierarchical model, ICAR based on st_bridges()",
+                   "hierarchical model, ICAR based on sfdep::st_dist_band()")) |> 
   rownames_to_column(var="modcode") |> 
   arrange(AIC) |> 
   select(model, AIC, `relative AIC`)
